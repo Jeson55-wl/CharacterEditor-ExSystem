@@ -10,8 +10,8 @@
   <div class="Characters">
     <div class="character" *ngFor="let Character of characters"
       [class.selected]="Character === slectedCharacter"
-      (click)="onSelect(Character)">
-      <img src="https://via.placeholder.com/40" alt="placeholder">
+      (click)="onSelect(Character)" fxLayout="row" fxLayoutAlign="start center">
+      <img src="https://via.placeholder.com/60" alt="placeholder">
       <span>{{Character.CharacterName}}</span>
     </div>
   </div>
