@@ -1,7 +1,7 @@
 .character
 {
   background-color: #0277bd;
-  transition: opacity 2s;
+  animation: slideFade 0.4s ease-out;
 }
 
 .character:hover
@@ -21,5 +21,17 @@
 }
 
 .character > img{
+  margin: 10px;
   border-radius: 50%;
+}
+
+@-webkit-keyframes slideFade{
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 80px;
+  }
 }

@@ -1,17 +1,8 @@
-<!-- <ul class="heroes">
-
-   <li *ngFor="let Character of characters"
-      [class.selected]="Character === slectedCharacter"
-      (click)="onSelect(Character)">
-      <span class="badge">{{Character.age}}</span> {{Character.name}}
-    </li>
-  </ul> -->
-
-  <div class="Characters">
-    <div class="character" *ngFor="let Character of characters"
-      [class.selected]="Character === slectedCharacter"
-      (click)="onSelect(Character)" fxLayout="row" fxLayoutAlign="start center">
-      <img src="https://via.placeholder.com/60" alt="placeholder">
-      <span>{{Character.CharacterName}}</span>
-    </div>
+<div class="Characters">
+  <div class="character" *ngFor="let Character of characters"
+    [class.selected]="Character === slectedCharacter"
+    (click)="onSelect(Character)" fxLayout="row" fxLayoutAlign="start center">
+    <img src="https://via.placeholder.com/60" alt="placeholder">
+    <span>{{Character.CharacterName}}</span>
   </div>
+</div>
