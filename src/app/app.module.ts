@@ -56,6 +56,7 @@ import { StatPointSelectorComponent } from './Components/stat-point-selector/sta
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ResourcePointSelectorComponent } from './Components/resource-point-selector/resource-point-selector.component';
 import { FormsModule } from '@angular/forms';
+import { ActionComponent } from './Components/action/action.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     CharacterSheetComponent,
     StatPointSelectorComponent,
-    ResourcePointSelectorComponent
+    ResourcePointSelectorComponent,
+    ActionComponent
   ],
   imports: [
     FormsModule,

@@ -1,0 +1,33 @@
+.rating
+{
+  float:left;
+  width: 100%;
+  align-content: center;
+}
+
+
+.rating input{
+  display: none;
+}
+
+.rating label
+{
+    display: block;
+}
+
+.rating label::before
+{
+  content: '\f111';
+  font-family: fontAwesome;
+}
+
+.rating:not(:checked) > label {
+  float:right;
+  width:1em;
+  color:#ddd;
+}
+
+
+.rating > input:checked ~ label {
+  color: #004ba0;
+}

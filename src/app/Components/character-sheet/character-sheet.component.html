@@ -87,12 +87,12 @@
 
                                   <div fxLayout="row" class="stat">
                                       <p>Rapidità: </p>
-                                      <app-stat-point-selector class="points" [itemId] = "3" [rating]="selectedCharacter.Rapidita" (childEvent)="selectedCharacter.Rapidita = $event"></app-stat-point-selector>
+                                      <app-stat-point-selector class="points" [itemId] = "3" [rating]="selectedCharacter.Rapidita" (childEvent)="onChangeRapiridta($event)"></app-stat-point-selector>
                                   </div>
 
                                   <div fxLayout="row" class="stat">
                                       <p>Resistenza: </p>
-                                      <app-stat-point-selector class="points" [itemId] = "4" [rating]="selectedCharacter.Resistenza" (childEvent)="selectedCharacter.Resistenza = $event"></app-stat-point-selector>
+                                      <app-stat-point-selector class="points" [itemId] = "4" [rating]="selectedCharacter.Resistenza" (childEvent)="onChangeResistenza($event)"></app-stat-point-selector>
                                   </div>
 
                                 </div>
@@ -109,12 +109,12 @@
 
                                     <div fxLayout="row" class="stat">
                                         <p>Ragione: </p>
-                                        <app-stat-point-selector class="points" [itemId] = "7" [rating]="selectedCharacter.Ragione" (childEvent)="selectedCharacter.Ragione = $event"></app-stat-point-selector>
+                                        <app-stat-point-selector class="points" [itemId] = "7" [rating]="selectedCharacter.Ragione" (childEvent)="onChangeRagione($event)"></app-stat-point-selector>
                                     </div>
 
                                     <div fxLayout="row" class="stat">
                                         <p>Saggezza: </p>
-                                        <app-stat-point-selector class="points" [itemId] = "8" [rating]="selectedCharacter.Saggezza" (childEvent)="selectedCharacter.Saggezza = $event"></app-stat-point-selector>
+                                        <app-stat-point-selector class="points" [itemId] = "8" [rating]="selectedCharacter.Saggezza" (childEvent)="onChangeSaggezza($event)"></app-stat-point-selector>
                                     </div>
                                 </div>
                             </div>
@@ -142,6 +142,30 @@
 
 
                         </div>
+                    </div>
+                    <mat-divider></mat-divider>
+
+                    <div class="character-stats" fxLayout="row">
+                      <div fxLayout="column">
+                        <span>Resistenza Fisica: {{selectedCharacter.ResistenzaFisica}}</span>
+                        <span>Resistenza Mentale: {{selectedCharacter.ResistenzaMentale}}</span>
+                      </div>
+
+                      <div fxLayout="column">
+                        <span> Salute: {{selectedCharacter.Salute}}</span>
+                        <span> Sanita: {{selectedCharacter.Sanita}}</span>
+                      </div>
+
+                      <div fxLayout="column">
+                        <div fxLayout="row">
+                          <span>Azioni Maggiori:</span>
+                          <app-action [rating]="selectedCharacter.AzioniMaggior" [itemId] = "63"></app-action>
+                        </div>
+                        <div fxLayout="row">
+                            <span>Azioni Minori:</span>
+                            <app-action [rating]="selectedCharacter.AzioniMinori" [itemId] = "55"></app-action>
+                        </div>
+                      </div>
                     </div>
 
                     <mat-divider></mat-divider>
