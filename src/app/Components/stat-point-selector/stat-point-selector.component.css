@@ -1,0 +1,44 @@
+.rating
+{
+  float:left;
+  width: 100%;
+  align-content: center;
+}
+
+
+.rating input{
+  display: none;
+}
+
+.rating label
+{
+    display: block;
+}
+
+.rating label::before
+{
+  content: '\f111';
+  font-family: fontAwesome;
+}
+
+.rating:not(:checked) > label {
+  float:right;
+  width:1em;
+  color:#ddd;
+}
+
+
+.rating > input:checked ~ label {
+  color: #004ba0;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #63a4ff;
+}
+
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #1976d2;
+}

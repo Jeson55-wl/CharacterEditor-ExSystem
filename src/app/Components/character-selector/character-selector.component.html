@@ -1,0 +1,17 @@
+<!-- <ul class="heroes">
+
+   <li *ngFor="let Character of characters"
+      [class.selected]="Character === slectedCharacter"
+      (click)="onSelect(Character)">
+      <span class="badge">{{Character.age}}</span> {{Character.name}}
+    </li>
+  </ul> -->
+
+  <div class="Characters">
+    <div class="character" *ngFor="let Character of characters"
+      [class.selected]="Character === slectedCharacter"
+      (click)="onSelect(Character)">
+      <img src="https://via.placeholder.com/40" alt="placeholder">
+      <span>{{Character.CharacterName}}</span>
+    </div>
+  </div>

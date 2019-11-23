@@ -1,0 +1,20 @@
+.character
+{
+  background-color: blue;
+  transition: opacity 2s;
+}
+
+.character:hover
+{
+  background-color: red;
+}
+
+
+.character.selected
+{
+  background-color: purple;
+}
+
+.character > img{
+  border-radius: 50%;
+}

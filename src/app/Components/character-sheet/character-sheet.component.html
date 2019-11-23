@@ -1,0 +1,249 @@
+            <!--La Scheda in se-->
+          <div *ngIf="selectedCharacter">
+
+            <div class="character-sheet">
+
+                    <div class="caracher-base-information" fxLayout="row" flex>
+                        <!--imamgine del personaggio-->
+                        <div class="character-image">
+                            <img src="https://via.placeholder.com/412" alt="">
+                        </div>
+
+                        <!-- informazioni base del persionaggio-->
+                        <div class="character-information" fxLayout="column">
+
+                            <mat-form-field class="chr-text-input">
+                                <input matInput placeholder="Razza" [(ngModel)] = "selectedCharacter.Race">
+                            </mat-form-field>
+
+                            <mat-form-field class="chr-text-input">
+                                <input matInput placeholder="Sesso" [(ngModel)] = "selectedCharacter.Sex">
+                            </mat-form-field>
+
+                            <mat-form-field class="chr-text-input">
+                                <input matInput placeholder="Origine" [(ngModel)] = "selectedCharacter.Origin">
+                            </mat-form-field>
+
+                            <mat-form-field class="chr-text-input">
+                                <input matInput placeholder="Età" [(ngModel)] = "selectedCharacter.Age">
+                            </mat-form-field>
+
+                            <mat-form-field class="chr-text-input">
+                                <input matInput placeholder="Archetipo" [(ngModel)] = "selectedCharacter.Archetype">
+                            </mat-form-field>
+
+                            <mat-form-field class="chr-text-input">
+                                <input matInput placeholder="Affigliazione" [(ngModel)] = "selectedCharacter.Affigliation">
+                            </mat-form-field>
+
+                            <mat-form-field class="chr-text-input">
+                                <input matInput placeholder="Rango" [(ngModel)] = "selectedCharacter.Rank">
+                            </mat-form-field>
+
+                            <mat-form-field class="chr-text-input">
+                                <input matInput placeholder="XP" [(ngModel)] = "selectedCharacter.XP">
+                            </mat-form-field>
+
+
+                        </div>
+
+                        <div class="headerDivider"></div>
+
+                        <!--nome e discrizzione per il personaggio-->
+                        <div class="character-name-description" fxLayout="column">
+                            <mat-form-field class="chr-text-input">
+                                <input matInput placeholder="Nome PG" [(ngModel)] = "selectedCharacter.CharacterName">
+                            </mat-form-field>
+
+                            <mat-form-field class="chr-text-input">
+                                <textarea matInput placeholder="Descrizione" rows="24" [(ngModel)] = "selectedCharacter.Description"></textarea>
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+
+                    <mat-divider></mat-divider>
+
+                    <div class="character-stats">
+                          <div fxLayout="row">
+                            <b style="width: 60%;">Caratteristiche Primarie (10 p)</b>
+                            <b style="float: right !important; align-self:flex-end; width: 14%; text-align: right;">Risorse (10 p)</b>
+                          </div>
+                        <mat-divider></mat-divider>
+
+                        <div class="StatsContainer" fxLayout="row">
+                            <div class="primary-stat" fxLayout="row">
+                                <div class="firs-stats" fxLayout="column">
+
+                                  <div fxLayout="row" class="stat">
+                                      <p>Coordinazione: {{message}} </p>
+                                      <app-stat-point-selector class="points" [itemId] = "1" [rating]="selectedCharacter.Coordinazione" (childEvent)="selectedCharacter.Coordinazione = $event"></app-stat-point-selector>
+                                  </div>
+
+                                  <div fxLayout="row" class="stat">
+                                      <p>Potenza: </p>
+                                      <app-stat-point-selector class="points" [itemId] = "2" [rating]="selectedCharacter.Potenza" (childEvent)="selectedCharacter.Potenza = $event"></app-stat-point-selector>
+                                  </div>
+
+                                  <div fxLayout="row" class="stat">
+                                      <p>Rapidità: </p>
+                                      <app-stat-point-selector class="points" [itemId] = "3" [rating]="selectedCharacter.Rapidita" (childEvent)="selectedCharacter.Rapidita = $event"></app-stat-point-selector>
+                                  </div>
+
+                                  <div fxLayout="row" class="stat">
+                                      <p>Resistenza: </p>
+                                      <app-stat-point-selector class="points" [itemId] = "4" [rating]="selectedCharacter.Resistenza" (childEvent)="selectedCharacter.Resistenza = $event"></app-stat-point-selector>
+                                  </div>
+
+                                </div>
+                                <div class="second-stats" fxLayout="column">
+                                    <div fxLayout="row" class="stat">
+                                        <p>Percezione: </p>
+                                        <app-stat-point-selector class="points" [itemId] = "5" [rating]="selectedCharacter.Precezione" (childEvent)="selectedCharacter.Precezione = $event"></app-stat-point-selector>
+                                    </div>
+
+                                    <div fxLayout="row" class="stat">
+                                        <p>Intuito: </p>
+                                        <app-stat-point-selector class="points" [itemId] = "6" [rating]="selectedCharacter.Intuito" (childEvent)="selectedCharacter.Intuito = $event"></app-stat-point-selector>
+                                    </div>
+
+                                    <div fxLayout="row" class="stat">
+                                        <p>Ragione: </p>
+                                        <app-stat-point-selector class="points" [itemId] = "7" [rating]="selectedCharacter.Ragione" (childEvent)="selectedCharacter.Ragione = $event"></app-stat-point-selector>
+                                    </div>
+
+                                    <div fxLayout="row" class="stat">
+                                        <p>Saggezza: </p>
+                                        <app-stat-point-selector class="points" [itemId] = "8" [rating]="selectedCharacter.Saggezza" (childEvent)="selectedCharacter.Saggezza = $event"></app-stat-point-selector>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="resources" fxLayout="column" fxLayoutAlign="center center" >
+                              <div class="resource">
+                                <p>Possedimenti</p>
+                                <app-resource-point-selector [itemId] = "10" [rating]="selectedCharacter.Possedimenti" (childEvent)="selectedCharacter.Possedimenti = $event"></app-resource-point-selector>
+                              </div>
+                              <div class="resource">
+                                <p>Alleati</p>
+                                <app-resource-point-selector [itemId] = "11" [rating]="selectedCharacter.Alleati" (childEvent)="selectedCharacter.Alleati = $event"></app-resource-point-selector>
+                              </div>
+                              <div class="resource">
+                                <p>Potere</p>
+                                <app-resource-point-selector [itemId] = "12" [rating]="selectedCharacter.Potere" (childEvent)="selectedCharacter.Potere = $event"></app-resource-point-selector>
+                              </div>
+                              <div class="resource">
+                                <p>Reputazione</p>
+                                <app-resource-point-selector [itemId] = "13" [rating]="selectedCharacter.Reputazione" (childEvent)="selectedCharacter.Reputazione = $event"></app-resource-point-selector>
+                              </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                    <mat-divider></mat-divider>
+
+                    <div class="character-ability-specialization" style="margin-bottom: 50px; margin-top: 10px;">
+
+
+                        <mat-accordion>
+                            <mat-expansion-panel>
+                              <mat-expansion-panel-header style="background-color: #1775d1; ">
+                                <mat-panel-title>
+                                  3
+                                </mat-panel-title>
+                                <mat-panel-description>
+                                  Combattere
+                                </mat-panel-description>
+                              </mat-expansion-panel-header>
+                              <!--Lista di specializzazioni-->
+                                <div class="Ability-Container" fxLayout="row">
+                                    <mat-card class="example-card" style="width: 100px; height: 150px; margin-top: 5px; margin-right: 10px;">
+                                        <mat-card-header style="background-color: #1775d1;">
+                                            <mat-card-title style="color: white; text-align: center; margin: 0;">Spade</mat-card-title>
+                                        </mat-card-header>
+                                        <mat-card-content style="height: 100xp; ">
+                                          <p style="font-size: 60px; text-align: center; margin-top: 50px;">3</p>
+                                        </mat-card-content>
+                                    </mat-card>
+
+                                    <mat-card class="example-card" style="width: 100px; height: 150px;  margin-top: 5px; margin-right: 10px;">
+                                        <mat-card-header style="background-color: #1775d1;">
+                                            <mat-card-title style="color: white; text-align: center; margin: 0;">Spade</mat-card-title>
+                                        </mat-card-header>
+                                        <mat-card-content style="height: 100xp; ">
+                                          <p style="font-size: 60px; text-align: center; margin-top: 50px;">3</p>
+                                        </mat-card-content>
+                                    </mat-card>
+
+                                    <mat-card class="example-card" style="width: 100px; height: 150px;  margin-top: 5px; margin-right: 10px; background-color: grey;">
+                                        <mat-card-content style="height: 100xp; ">
+                                          <i class="fa fa-plus" aria-hidden="true" style="font-size: 60px; text-align: center; margin-top: 50px; width: 100%;"></i>
+                                        </mat-card-content>
+                                    </mat-card>
+                                </div>
+
+
+
+
+                            </mat-expansion-panel>
+
+                          </mat-accordion>
+
+                          <mat-accordion>
+                              <mat-expansion-panel>
+                                <mat-expansion-panel-header style="background-color: #1775d1; ">
+                                  <mat-panel-title>
+                                    2
+                                  </mat-panel-title>
+                                  <mat-panel-description>
+                                    Conoscenze magiche
+                                  </mat-panel-description>
+                                </mat-expansion-panel-header>
+                                <!--Lista di specializzazioni-->
+                                  <div class="Ability-Container" fxLayout="row">
+                                      <mat-card class="example-card" style="width: 100px; height: 150px; margin-top: 5px; margin-right: 10px;">
+                                          <mat-card-header style="background-color: #1775d1;">
+                                              <mat-card-title style="color: white; text-align: center; margin: 0;">Spade</mat-card-title>
+                                          </mat-card-header>
+                                          <mat-card-content style="height: 100xp; ">
+                                            <p style="font-size: 60px; text-align: center; margin-top: 50px;">3</p>
+                                          </mat-card-content>
+                                      </mat-card>
+
+                                      <mat-card class="example-card" style="width: 100px; height: 150px;  margin-top: 5px; margin-right: 10px;">
+                                          <mat-card-header style="background-color: #1775d1;">
+                                              <mat-card-title style="color: white; text-align: center; margin: 0;">Spade</mat-card-title>
+                                          </mat-card-header>
+                                          <mat-card-content style="height: 100xp; ">
+                                            <p style="font-size: 60px; text-align: center; margin-top: 50px;">3</p>
+                                          </mat-card-content>
+                                      </mat-card>
+
+                                      <mat-card class="example-card" style="width: 100px; height: 150px;  margin-top: 5px; margin-right: 10px; background-color: grey;">
+                                          <mat-card-content style="height: 100xp; ">
+                                            <i class="fa fa-plus" aria-hidden="true" style="font-size: 60px; text-align: center; margin-top: 50px; width: 100%;"></i>
+                                          </mat-card-content>
+                                      </mat-card>
+                                  </div>
+
+
+
+
+                              </mat-expansion-panel>
+
+                            </mat-accordion>
+
+
+
+                          <button mat-button style="background-color: grey; width: 100%; margin-top: 1;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+                    </div>
+
+
+
+                </div>
+              </div>

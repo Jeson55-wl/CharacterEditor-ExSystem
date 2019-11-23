@@ -1,0 +1,69 @@
+
+.chr-text-input
+{
+    font-size: small !important;
+}
+
+.ToolBarEditor
+{
+    background-color: #58a5f0;
+}
+
+.points
+{
+  display: flex;
+  width: 100%;
+  align-self: center;
+  margin-left: 10px;
+  text-align: center !important;
+}
+
+.resources
+{
+  width: 20%;
+}
+
+.primary-stat
+{
+  width: 60%;
+}
+
+div.resource > p{
+  text-align: center;
+}
+
+.character-name-description
+{
+    margin-left: 10px;
+    width: 30%;
+}
+
+.stat
+{
+  font-size: 21px;
+}
+
+.second-stats
+{
+  margin-left: 10px;
+}
+
+.headerDivider
+{
+    border-left:1px solid #16222c;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.character-sheet
+{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.character-information
+{
+    margin-left: 10px;
+    width: 20%;
+}
