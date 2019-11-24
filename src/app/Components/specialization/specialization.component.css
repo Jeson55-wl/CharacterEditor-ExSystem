@@ -12,7 +12,8 @@
 .card-title{
     color: white;
     text-align: center;
-    margin: 0;
+    margin: 4px 0 !important;
+    width: 100% !important;
 }
 
 .card-content{
