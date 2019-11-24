@@ -1,0 +1,18 @@
+<p>Aggiungi una Abilità</p>
+
+<div fxLayout="row">
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Nome: " [(ngModel)]="data.name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Rango:" [(ngModel)]="data.rank">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" >
+    <input matInput placeholder="Mastery" [(ngModel)]="data.mastery">
+  </mat-form-field>
+
+  <button mat-button (click)="onAdd()"> Aggiungi</button>
+</div>

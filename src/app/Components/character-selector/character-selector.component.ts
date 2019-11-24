@@ -22,7 +22,7 @@ export class CharacterSelectorComponent implements OnInit {
 
 
   onSelect(character: Character): void {
-    console.log(character.Coordinazione);
+    console.log(this._characterServiece.getSelectedCharacter().Ability);
     this.slectedCharacter = character;
     this._characterServiece.setSelectedCharacter(character);
     this._characterServiece.sendMessage('SelectedIsChanged');

@@ -1,3 +1,5 @@
+import { Abilityspec } from './abilityspec';
+
 export class Character
 {
 
@@ -42,6 +44,10 @@ export class Character
     AzioniMaggior: number;
     AzioniMinori: number;
 
+    Ability = new Array<Abilityspec>();
 
-
+    AddAbility(name: string, rank: number, mastery: number)
+    {
+      this.Ability.push(new Abilityspec(rank, name, mastery));
+    }
 }

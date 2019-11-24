@@ -57,6 +57,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ResourcePointSelectorComponent } from './Components/resource-point-selector/resource-point-selector.component';
 import { FormsModule } from '@angular/forms';
 import { ActionComponent } from './Components/action/action.component';
+import { AbilityComponent } from './Components/ability/ability.component';
+import { SpecializationComponent } from './Components/specialization/specialization.component';
+import { SpecializationAdderComponent } from './Components/specialization-adder/specialization-adder.component';
+import { AbilityAdderComponent } from './Components/ability-adder/ability-adder.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +70,11 @@ import { ActionComponent } from './Components/action/action.component';
     CharacterSheetComponent,
     StatPointSelectorComponent,
     ResourcePointSelectorComponent,
-    ActionComponent
+    ActionComponent,
+    AbilityComponent,
+    SpecializationComponent,
+    SpecializationAdderComponent,
+    AbilityAdderComponent
   ],
   imports: [
     FormsModule,
@@ -117,6 +125,10 @@ import { ActionComponent } from './Components/action/action.component';
     MatTreeModule,
     PortalModule,
     ScrollingModule
+  ],
+  entryComponents: [
+    SpecializationAdderComponent,
+    AbilityAdderComponent
   ],
   providers: [CharacterManagerService],
   bootstrap: [AppComponent]

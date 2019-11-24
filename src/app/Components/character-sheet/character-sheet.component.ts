@@ -1,6 +1,8 @@
 import { Character } from './../../Classes/character';
 import { CharacterManagerService } from './../../Services/character-manager.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AbilityAdderComponent } from '../ability-adder/ability-adder.component';
 
 @Component({
   selector: 'app-character-sheet',
@@ -9,10 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterSheetComponent implements OnInit {
 
+
   selectedCharacter: Character;
+
+
+
   public message = "";
 
-  constructor(private _characterServiece: CharacterManagerService) { }
+  constructor(private _characterServiece: CharacterManagerService, public dialog: MatDialog) { }
   ngOnInit() {
 
     this._characterServiece.CharSelectorMessage$.subscribe(message => {
@@ -56,6 +62,29 @@ export class CharacterSheetComponent implements OnInit {
 
   }
 
+  AddAbility()
+  {
+    let Name: string;
+    let Rank: number;
+    let Mastery: number;
+
+    let editor = this.dialog.open(AbilityAdderComponent, {
+
+      data: {name: Name, rank: Rank, mastery: Mastery}
+
+      });
+
+    editor.afterClosed().subscribe(result => {
+      if(result)
+      {
+        Name = result.name;
+        Rank = result.rank;
+        Mastery = result.mastery;
+          this._characterServiece.getSelectedCharacter().AddAbility(Name, Rank, Mastery);
+        }
+      });
+  }
+
 
   //UpdateSecondaryStats
   UpdateDisfesaFisica()
@@ -82,8 +111,7 @@ export class CharacterSheetComponent implements OnInit {
   {
     this.selectedCharacter.AzioniMaggior = Math.ceil(this.selectedCharacter.Rapidita / 2.0);
     this.selectedCharacter.AzioniMinori = Math.floor(this.selectedCharacter.Rapidita / 2.0);
-    console.log("CurrentSlelectedValue: " + this.selectedCharacter.AzioniMaggior);
-    console.log("CurrentSlelectedValue: " + this.selectedCharacter.AzioniMinori);
+
   }
 
 
