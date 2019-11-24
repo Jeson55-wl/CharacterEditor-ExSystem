@@ -95,3 +95,43 @@ div.resource > p{
   margin-left: 10px;
   width: 20%;
 }
+
+.character-item {
+  display: inline-block;
+  position: relative;
+}
+
+.character-img {
+  opacity: 1;
+  transition: all 0.15s ease-in; /* transition the opacity for nice fade */
+}
+
+.character-item:hover .character-img {
+  opacity: 0.3; /* change opacity on wrapper div hover */
+}
+
+.character-item:hover .image-button {
+  opacity: 1; /* change opacity on wrapper div hover */
+}
+
+.image-button {
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.15s ease-in;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #58a5f0;
+}
+
+.fa-pencil-square-o{
+  color: white;
+  font-size: 24px;
+}

@@ -1,15 +1,18 @@
-<!--La Scheda in se-->
+<!-- La Scheda in sé -->
 <div *ngIf="selectedCharacter">
 
   <div class="character-sheet">
 
-    <div class="caracher-base-information" fxLayout="row" flex>
-      <!--imamgine del personaggio-->
-      <div class="character-image">
-        <img src="https://via.placeholder.com/412" alt="">
+    <div class="character-base-information" fxLayout="row" flex>
+      <!-- Immagine del personaggio -->
+      <div class="character-item">
+        <img src="https://via.placeholder.com/412" class="character-img" alt="">
+        <button mat-button class="image-button">
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </button>
       </div>
 
-      <!-- informazioni base del persionaggio-->
+      <!-- Informazioni base del personaggio -->
       <div class="character-information" fxLayout="column">
 
         <mat-form-field class="chr-text-input">
