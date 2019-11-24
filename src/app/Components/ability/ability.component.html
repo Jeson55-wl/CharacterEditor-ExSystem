@@ -1,26 +1,29 @@
 <mat-accordion>
   <mat-expansion-panel>
     <mat-expansion-panel-header style="background-color: #1775d1; ">
+      <!-- Edit Button -->
+      <button mat-button class="edit-button">
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+      </button>
+      
       <mat-panel-title>
-        <span>Rank: {{Ability.Rank}}</span>
+        <span class="rank">Rank: {{Ability.Rank}}</span>
         <span>Mastery: {{Ability.Mastery}}</span>
       </mat-panel-title>
       <mat-panel-description>
         <span> Nome: {{Ability.Name}} </span>
       </mat-panel-description>
     </mat-expansion-panel-header>
+    
     <!--Lista di specializzazioni-->
-      <div class="Ability-Container" fxLayout="row">
-          <app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specializationIndex]="i" [abilityIndexs]="abilityIndex"></app-specialization>
+    <div class="Ability-Container" fxLayout="row">
+      <app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specializationIndex]="i" [abilityIndexs]="abilityIndex"></app-specialization>
 
+      <button mat-button class="add-button" (click)="AddSpecialization()">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </button>
 
-          <button mat-button style="width: 100px; margin-top: 5px; margin-right: 10px; background-color: grey;" (click)="AddSpecialization()">
-            <i class="fa fa-plus" aria-hidden="true" style="font-size: 20px;"></i>
-          </button>
-
-
-
-      </div>
+    </div>
   </mat-expansion-panel>
 
 </mat-accordion>

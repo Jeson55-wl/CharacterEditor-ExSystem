@@ -1,0 +1,45 @@
+.example-card{
+    width: 100px;
+    height: 150px;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+
+.card-header{
+   background-color: #1775d1;
+}
+
+.card-title{
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.card-content{
+    height: 100px;
+}
+
+.card-rank{
+    font-size: 60px;
+    text-align: center;
+    height:100%;
+}
+
+.edit-button{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    height: 40px;
+    width: 40px;
+    background-color: #29b6f6;
+    border-radius: 50%;
+    
+    /*overrides min-width 64px from mat-button*/
+    min-width: 0px !important;
+}
+
+.fa-pencil-square-o{
+    color: white;
+    font-size: 20px;
+    margin-left: -5px;
+}

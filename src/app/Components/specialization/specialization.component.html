@@ -1,8 +1,16 @@
-<mat-card class="example-card" style="width: 100px; height: 150px; margin-top: 5px; margin-right: 10px;">
-  <mat-card-header style="background-color: #1775d1;">
-      <mat-card-title style="color: white; text-align: center; margin: 0;">{{specialization.Name}}</mat-card-title>
+<mat-card class="example-card">
+  <!-- Edit Button -->
+  <button mat-button class="edit-button">
+    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+  </button>
+  
+  <!-- Card Header with title -->
+  <mat-card-header class="card-header">
+    <mat-card-title class="card-title">{{specialization.Name}}</mat-card-title>
   </mat-card-header>
-  <mat-card-content style="height: 100xp; ">
-    <p style="font-size: 60px; text-align: center; margin-top: 50px;">{{specialization.Rank}}</p>
+  
+  <!-- Card Content with rank -->
+  <mat-card-content class="card-content" >
+    <p class="card-rank" fxLayout="column" fxLayoutAlign="center center">{{specialization.Rank}}</p>
   </mat-card-content>
 </mat-card>
