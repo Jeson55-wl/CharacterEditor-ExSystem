@@ -20,13 +20,17 @@
                     <app-character-sheet></app-character-sheet>
                 </mat-tab>
 
-                <mat-tab label="Special">
-                    kjahsaad
+                <mat-tab label="Spacial">
+                    <app-special-sheet></app-special-sheet>
                 </mat-tab>
 
                 <mat-tab label="Inventario">
-                    lkskhda
+                    In Lavorazione
                 </mat-tab>
             </mat-tab-group>
+            <button mat-button class="SaveButton" (click)="SaveCurrentCharacter()"> <i class="fa fa-floppy-o" aria-hidden="true"></i> </button>
     </mat-drawer-content>
+
 </mat-drawer-container>
+
+

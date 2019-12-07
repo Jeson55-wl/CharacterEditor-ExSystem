@@ -21,14 +21,33 @@
   width: 15%;
 }
 
-.example-form 
+.example-form
 {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
 }
-  
-.example-full-width 
+
+.example-full-width
 {
   width: 100%;
+}
+
+.SaveButton
+{
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+
+  margin-right: 50px;
+  margin-bottom: 50px;
+
+  width: 100px;
+  height: 100px;
+
+  font-size: 50px;
+  color: #fafafa;
+  border-radius: 50%;
+  background-color: #0277bd;
+  z-index: 50;
 }

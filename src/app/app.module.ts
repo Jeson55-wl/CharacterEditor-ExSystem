@@ -53,7 +53,6 @@ import { HomeComponent } from './Components/home/home.component';
 import { CharacterSheetComponent } from './Components/character-sheet/character-sheet.component';
 import { StatPointSelectorComponent } from './Components/stat-point-selector/stat-point-selector.component';
 
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ResourcePointSelectorComponent } from './Components/resource-point-selector/resource-point-selector.component';
 import { FormsModule } from '@angular/forms';
 import { ActionComponent } from './Components/action/action.component';
@@ -61,6 +60,11 @@ import { AbilityComponent } from './Components/ability/ability.component';
 import { SpecializationComponent } from './Components/specialization/specialization.component';
 import { SpecializationAdderComponent } from './Components/specialization-adder/specialization-adder.component';
 import { AbilityAdderComponent } from './Components/ability-adder/ability-adder.component';
+
+import { NgxElectronModule } from 'ngx-electron';
+import { SpecialSheetComponent } from './Components/special-sheet/special-sheet.component';
+import { SpecialEditorComponent } from './Components/special-editor/special-editor.component';
+import { SpecialComponent } from './Components/special/special.component';
 
 @NgModule({
   declarations: [
@@ -74,11 +78,14 @@ import { AbilityAdderComponent } from './Components/ability-adder/ability-adder.
     AbilityComponent,
     SpecializationComponent,
     SpecializationAdderComponent,
-    AbilityAdderComponent
+    AbilityAdderComponent,
+    SpecialSheetComponent,
+    SpecialEditorComponent,
+    SpecialComponent
   ],
   imports: [
+    NgxElectronModule,
     FormsModule,
-    FontAwesomeModule,
     FlexLayoutModule,
     BrowserModule,
     AppRoutingModule,
@@ -128,7 +135,8 @@ import { AbilityAdderComponent } from './Components/ability-adder/ability-adder.
   ],
   entryComponents: [
     SpecializationAdderComponent,
-    AbilityAdderComponent
+    AbilityAdderComponent,
+    SpecialEditorComponent
   ],
   providers: [CharacterManagerService],
   bootstrap: [AppComponent]

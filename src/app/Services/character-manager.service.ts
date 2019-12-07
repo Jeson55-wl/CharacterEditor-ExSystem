@@ -30,6 +30,13 @@ export class CharacterManagerService {
   addCharacter()
   {
     this.characters.push(new Character());
+    this.characters[this.characters.length - 1].CharacterID = this.characters.length - 1;
+    this.setSelectedCharacter(this.characters[this.characters.length - 1]);
+  }
+
+  addSpecificCharacter(character: Character)
+  {
+    this.characters.push(character);
     this.setSelectedCharacter(this.characters[this.characters.length - 1]);
   }
 

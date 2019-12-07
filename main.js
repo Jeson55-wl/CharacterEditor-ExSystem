@@ -1,7 +1,9 @@
-const { app, BrowserWindow, ipcMain  } = require('electron')
+const { app, BrowserWindow, ipcMain} = require('electron')
+const fs = require('fs');
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win
+
 
 function createWindow () {
   // Create the browser window.
@@ -17,7 +19,7 @@ function createWindow () {
   win.loadFile('dist/ExSystem-CharacterEditor/index.html')
 
   // Open the DevTools.
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -27,6 +29,39 @@ function createWindow () {
     win = null
   })
 }
+
+fs.existsSync("Characters") || fs.mkdirSync("Characters");
+
+var characters = new Array();
+
+console.log("It Work!");
+
+var folders = fs.readdirSync("Characters");
+for(i = 0; i < folders.length; i++)
+{
+  console.log("Folders: " + i);
+  var data = fs.readFileSync("Characters/" + folders[i] + "/char.json");
+  var parse = JSON.parse(data);
+  characters.push(parse);
+}
+
+
+ipcMain.on('load-characters', function(event)
+{
+  event.sender.send('load-characters', characters);
+})
+
+ipcMain.on('save-current-character', (event, arg) => {
+    console.log("charcter saved");
+    fs.existsSync("Characters/Character" + arg.CharacterID) || fs.mkdirSync("Characters/Character" + arg.CharacterID);
+    var parseData = JSON.stringify(arg);
+    fs.writeFileSync("Characters/" + "Character" + arg.CharacterID + "/char.json",parseData);
+})
+
+
+
+
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
