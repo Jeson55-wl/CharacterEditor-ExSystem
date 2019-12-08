@@ -1,45 +1,61 @@
 <mat-card>
   <mat-card-title>
-    <H2>Name: </H2>
+    <H2>Name: {{special.Name}}</H2>
   </mat-card-title>
   <div fxLayout="column">
-    <h3>Description: </h3>
-    <h3>Pool: </h3>
-    <h3>Rank: </h3>
+    <h3>Description:</h3> <h4>{{special.Descirtion}}</h4>
+    <h3>Pool: {{special.Pool}}</h3>
+    <h3>Rank: {{special.Rango}}</h3>
 
   <mat-form-field class="example-chip-list">
-    <mat-chip-list #chipList aria-label="Manifestazione" placeholder="Manifestazione">
-      <mat-chip>
-      Test
-      </mat-chip>
+    <p>Manifestazione</p>
+    <mat-chip-list #chipList aria-label="Manifestazione">
+      <div *ngFor="let manifestazione of special.Manifestazione">
+        <mat-chip *ngIf="manifestazione">
+          <div>{{checkStat(manifestazione.name)}}</div>
+        </mat-chip>
+      </div>
     </mat-chip-list>
   </mat-form-field>
 
-    <mat-form-field class="example-chip-list">
-        <mat-chip-list #chipList aria-label="Durata" placeholder="Durata">
-          <mat-chip>
-              Test
+  <mat-form-field class="example-chip-list">
+      <p>Durata</p>
+      <mat-chip-list #chipList aria-label="Durata">
+        <div *ngFor="let durata of special.Durata">
+          <mat-chip *ngIf="durata">
+            <div>{{checkStat(durata.name)}}</div>
           </mat-chip>
-        </mat-chip-list>
-      </mat-form-field>
+        </div>
+      </mat-chip-list>
+    </mat-form-field>
 
-      <mat-form-field class="example-chip-list">
-          <mat-chip-list #chipList aria-label="Tipologia" placeholder="Tipologia">
-            <mat-chip  >
-                Test
-            </mat-chip>
-          </mat-chip-list>
-        </mat-form-field>
 
-        <mat-form-field class="example-chip-list">
-            <mat-chip-list #chipList aria-label="Effetto" placeholder="Effetto">
-              <mat-chip >
-                  Test
-              </mat-chip>
-            </mat-chip-list>
-          </mat-form-field>
+  <mat-form-field class="example-chip-list">
+      <p>Tipologia</p>
+      <mat-chip-list #chipList aria-label="Tipologia">
+        <div *ngFor="let tipologia of special.Tipologia">
+          <mat-chip *ngIf="tipologia">
+            <div>{{checkStat(tipologia.name)}}</div>
+          </mat-chip>
+        </div>
+      </mat-chip-list>
+    </mat-form-field>
 
-        <h2>Intensità: </h2>
+
+  <mat-form-field class="example-chip-list">
+      <p>Effetto</p>
+      <mat-chip-list #chipList aria-label="Effetto">
+        <div *ngFor="let effetto of special.Effetto">
+          <mat-chip *ngIf="effetto">
+            <div>{{checkStat(effetto.name)}}</div>
+          </mat-chip>
+        </div>
+      </mat-chip-list>
+    </mat-form-field>
+
+
+
+    <h2 *ngIf="special.Intensita">{{special.Intensita.name}}</h2>
 
   </div>
 

@@ -7,16 +7,18 @@ export class Special
     pool: string,
     punti: number,
     currency: string,
+    description: string,
     manifestazione:  Array<SpecialStatDataType>,
     durata:  Array<SpecialStatDataType>,
     tipologia:  Array<SpecialStatDataType>,
     effetto:  Array<SpecialStatDataType>,
-    intesita: number
+    intesita: SpecialStatDataType
     )
   {
     this.Name = name;
     this.Pool = pool;
     this.Punti = punti;
+    this.Descirtion = description;
 
     this.Rango = punti / 2;
     this.Currency = currency;
@@ -28,19 +30,19 @@ export class Special
     this.Intensita = intesita;
   }
 
-  Name: string;
-  Pool: string;
-  Descirtion: string;
-  Currency: string;
+  public Name: string;
+  public Pool: string;
+  public Descirtion: string;
+  public Currency: string;
 
-  Punti: number;
-  Rango: number;
+  public Punti: number;
+  public Rango: number;
 
-  Manifestazione: Array<SpecialStatDataType>;
-  Durata:  Array<SpecialStatDataType>;
+  public Manifestazione: Array<SpecialStatDataType>;
+  public Durata:  Array<SpecialStatDataType>;
 
-  Tipologia:  Array<SpecialStatDataType>;
+  public Tipologia:  Array<SpecialStatDataType>;
 
-  Effetto:  Array<SpecialStatDataType>;
-  Intensita: number;
+  public Effetto:  Array<SpecialStatDataType>;
+  public Intensita: SpecialStatDataType;
 }

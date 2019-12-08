@@ -73,14 +73,14 @@ export class SpecialEditorComponent implements OnInit {
     this.data.effetto = this.selectedEffetto;
     this.data.intensita = this.selectedIntensita;
 
-    this.data.puntiSpesi = this.puntispesi;
+    this.data.puntispesi = this.puntispesi;
     this.data.rank = this.rank;
 
     this.data.name = this.name;
     this.data.currency = this.currency;
     this.data.pool = this.pool;
 
-    this.data.descriptio = this.description;
+    this.data.description = this.description;
 
 
 

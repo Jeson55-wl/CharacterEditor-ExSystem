@@ -13,13 +13,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    /*this._electronService.ipcRenderer.send('load-characters');
+    this._electronService.ipcRenderer.send('load-characters');
     this._electronService.ipcRenderer.on('load-characters', (event, arg)=>{
         for(let i = 0; i < arg.length; i++)
         {
           this._characterServie.addSpecificCharacter(arg[i]);
         }
-    });*/
+    });
 
 
   }

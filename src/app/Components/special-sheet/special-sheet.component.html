@@ -1,19 +1,19 @@
-<div class="special-sheet">
-  <p>CurrentPoints: {{PuntiSpesi}}</p>
+<div class="special-sheet" *ngIf="selectedCharacter">
+  <p>CurrentPoints: {{selectedCharacter.spendedCurrencyPoints}}</p>
   <div class="currency" fxLayout="column">
     <div fxLayout="row">
-      <p>Tecniche: {{TechincheCurrecyPoints}}</p>
+      <p>Tecniche: {{selectedCharacter.TechincheCurrecyPoints}}</p>
       <button mat-button (click)="addTechinchePoint()"><i class="fa fa-plus" aria-hidden="true" ></i></button>
       <button mat-button (click)="removeTechinchePoint()"><i class="fa fa-minus" aria-hidden="true"></i></button>
 
     </div>
     <div fxLayout="row">
-      <p>Capacità: {{CapacitaCurrecyPoints}}</p>
+      <p>Capacità: {{selectedCharacter.CapacitaCurrecyPoints}}</p>
       <button mat-button (click)="addCapacitaPoint()"><i class="fa fa-plus" aria-hidden="true" ></i></button>
       <button mat-button (click)="removeCapacitaPoint()"><i class="fa fa-minus" aria-hidden="true"></i></button>
     </div>
     <div fxLayout="row">
-      <p>Poteri: {{PoteriCurrecyPoints}}</p>
+      <p>Poteri: {{selectedCharacter.PoteriCurrencyPoints}}</p>
       <button mat-button (click)="addPoteriPoint()"><i class="fa fa-plus" aria-hidden="true" ></i></button>
       <button mat-button (click)="removePoteriPoint()"><i class="fa fa-minus" aria-hidden="true"></i></button>
     </div>
@@ -37,10 +37,7 @@
           <div class="Ability-Container" fxLayout="row">
             <!--<app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specialIndex]="i"></app-specialization>-->
             <div fxLayout="row">
-              <app-special></app-special>
-              <app-special></app-special>
-              <app-special></app-special>
-              <app-special></app-special>
+              <app-special *ngFor="let special of selectedCharacter.specialRank1" [special]="special"></app-special>
               <button mat-button class="add-button" (click)="AddSpecialRank1()">
                 <i class="fa fa-plus" aria-hidden="true"></i>
               </button>
@@ -65,7 +62,8 @@
           <div class="Ability-Container" fxLayout="row">
             <!--<app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specialIndex]="i"></app-specialization>-->
 
-            <button mat-button class="add-button">
+            <app-special *ngFor="let special of selectedCharacter.specialRank2" [special]="special"></app-special>
+            <button mat-button class="add-button" (click)="AddSpecialRank2()">
               <i class="fa fa-plus" aria-hidden="true"></i>
             </button>
 
@@ -88,10 +86,10 @@
           <div class="Ability-Container" fxLayout="row">
             <!--<app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specialIndex]="i"></app-specialization>-->
 
-            <button mat-button class="add-button">
+            <app-special *ngFor="let special of selectedCharacter.specialRank3" [special]="special"></app-special>
+            <button mat-button class="add-button" (click)="AddSpecialRank3()">
               <i class="fa fa-plus" aria-hidden="true"></i>
             </button>
-
           </div>
         </mat-expansion-panel>
 
@@ -112,7 +110,8 @@
           <div class="Ability-Container" fxLayout="row">
             <!--<app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specialIndex]="i"></app-specialization>-->
 
-            <button mat-button class="add-button">
+            <app-special *ngFor="let special of selectedCharacter.specialRank4" [special]="special"></app-special>
+            <button mat-button class="add-button" (click)="AddSpecialRank4()">
               <i class="fa fa-plus" aria-hidden="true"></i>
             </button>
 
@@ -134,7 +133,8 @@
           <div class="Ability-Container" fxLayout="row">
             <!--<app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specialIndex]="i"></app-specialization>-->
 
-            <button mat-button class="add-button">
+            <app-special *ngFor="let special of selectedCharacter.specialRank5" [special]="special"></app-special>
+            <button mat-button class="add-button" (click)="AddSpecialRank5()">
               <i class="fa fa-plus" aria-hidden="true"></i>
             </button>
 
@@ -156,7 +156,9 @@
           <div class="Ability-Container" fxLayout="row">
             <!--<app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specialIndex]="i"></app-specialization>-->
 
-            <button mat-button class="add-button">
+
+            <app-special *ngFor="let special of selectedCharacter.specialRank6" [special]="special"></app-special>
+            <button mat-button class="add-button" (click)="AddSpecialRank6()">
               <i class="fa fa-plus" aria-hidden="true"></i>
             </button>
 

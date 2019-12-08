@@ -62,11 +62,11 @@ export class Character
 
     spendedCurrencyPoints = 0;
 
-    TechincheCurrecyPoints = 0;
-    CapacitaCurrecyPoints  = 0;
-    PoteriCurrencyPoints = 0;
+    TechincheCurrecyPoints: number = 0;
+    CapacitaCurrecyPoints: number  = 0;
+    PoteriCurrencyPoints: number = 0;
 
-    AddAbility(name: string, rank: number, mastery: number)
+    public AddAbility(name: string, rank: number, mastery: number)
     {
       this.Ability.push(new Abilityspec(rank, name, mastery));
     }
@@ -79,78 +79,85 @@ export class Character
                     pool: string,
                     punti: number,
                     currency: string,
+                    desciption: string,
+
                     manifestazione: Array<SpecialStatDataType>,
                     durata: Array<SpecialStatDataType>,
                     tipologia: Array<SpecialStatDataType>,
                     effetto: Array<SpecialStatDataType>,
-                    intesita: number)
+                    intesita: SpecialStatDataType)
     {
-      this.specialRank1.push(new Special(name, pool, punti , currency, manifestazione, durata, tipologia, effetto, intesita));
+      this.specialRank1.push(new Special(name, pool, punti , currency,desciption, manifestazione, durata, tipologia, effetto, intesita));
     }
 
     AddSpecialRank2(name: string,
                     pool: string,
                     punti: number,
                     currency: string,
+                    desciption: string,
                     manifestazione: Array<SpecialStatDataType>,
                     durata: Array<SpecialStatDataType>,
                     tipologia: Array<SpecialStatDataType>,
                     effetto: Array<SpecialStatDataType>,
-                    intesita: number)
+                    intesita: SpecialStatDataType)
     {
-      this.specialRank2.push(new Special(name, pool, punti , currency, manifestazione, durata, tipologia, effetto, intesita));
+      this.specialRank2.push(new Special(name, pool, punti , currency,desciption, manifestazione, durata, tipologia, effetto, intesita));
     }
 
     AddSpecialRank3(name: string,
                     pool: string,
                     punti: number,
                     currency: string,
+                    desciption: string,
                     manifestazione: Array<SpecialStatDataType>,
                     durata: Array<SpecialStatDataType>,
                     tipologia: Array<SpecialStatDataType>,
                     effetto: Array<SpecialStatDataType>,
-                    intesita: number)
+                    intesita: SpecialStatDataType)
     {
-      this.specialRank3.push(new Special(name, pool, punti , currency, manifestazione, durata, tipologia, effetto, intesita));
+      this.specialRank3.push(new Special(name, pool, punti , currency, desciption, manifestazione, durata, tipologia, effetto, intesita));
     }
 
     AddSpecialRank4(name: string,
                     pool: string,
                     punti: number,
                     currency: string,
+                    desciption: string,
                     manifestazione: Array<SpecialStatDataType>,
                     durata: Array<SpecialStatDataType>,
                     tipologia: Array<SpecialStatDataType>,
                     effetto: Array<SpecialStatDataType>,
-                    intesita: number)
+                    intesita: SpecialStatDataType)
     {
-      this.specialRank4.push(new Special(name, pool, punti , currency, manifestazione, durata, tipologia, effetto, intesita));
+      this.specialRank4.push(new Special(name, pool, punti , currency,desciption, manifestazione, durata, tipologia, effetto, intesita));
     }
 
     AddSpecialRank5(name: string,
                     pool: string,
                     punti: number,
                     currency: string,
+                    desciption: string,
                     manifestazione: Array<SpecialStatDataType>,
                     durata: Array<SpecialStatDataType>,
                     tipologia: Array<SpecialStatDataType>,
                     effetto: Array<SpecialStatDataType>,
-                    intesita: number)
+                    intesita: SpecialStatDataType)
     {
-      this.specialRank5.push(new Special(name, pool, punti , currency, manifestazione, durata, tipologia, effetto, intesita));
+      this.specialRank5.push(new Special(name, pool, punti , currency,desciption, manifestazione, durata, tipologia, effetto, intesita));
     }
 
     AddSpecialRank6(name: string,
                     pool: string,
                     punti: number,
                     currency: string,
+                    desciption: string,
                     manifestazione: Array<SpecialStatDataType>,
                     durata: Array<SpecialStatDataType>,
                     tipologia: Array<SpecialStatDataType>,
                     effetto: Array<SpecialStatDataType>,
-                    intesita: number)
+                    intesita: SpecialStatDataType)
     {
-      this.specialRank6.push(new Special(name, pool, punti , currency, manifestazione, durata, tipologia, effetto, intesita));
+      this.specialRank6.push(new Special(name, pool, punti , currency,desciption, manifestazione, durata, tipologia, effetto, intesita));
     }
 
     RemoveSpecialRank1(index: number)

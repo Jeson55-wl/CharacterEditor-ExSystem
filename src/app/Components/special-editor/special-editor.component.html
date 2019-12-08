@@ -1,19 +1,19 @@
 <h1>Special Editor</h1>
 
 <mat-form-field class="example-full-width">
-  <input matInput placeholder="Nome" [ngModel]="name">
+  <input matInput placeholder="Nome" [(ngModel)]="name">
 </mat-form-field>
 
 <mat-form-field class="example-full-width" >
-  <input matInput placeholder="Currency" [ngModel]="currency">
+  <input matInput placeholder="Currency" [(ngModel)]="currency">
 </mat-form-field>
 
 <mat-form-field class="example-full-width">
-  <input matInput placeholder="Pool" [ngModel]="pool">
+  <input matInput placeholder="Pool" [(ngModel)]="pool">
 </mat-form-field>
 
 <mat-form-field class="example-full-width" >
-  <textarea matInput placeholder="Descrizione" [ngModel]="description"></textarea>
+  <textarea matInput placeholder="Descrizione" [(ngModel)]="description"></textarea>
 </mat-form-field>
 
 
@@ -68,7 +68,7 @@
       <mat-form-field>
         <mat-label>Effetto</mat-label>
         <mat-select [(value)]="selectedEffetto[0]" (selectionChange)="OnUpdateStats()">
-        <mat-option  *ngFor="let effetto of specialdatacenter.listOfTipologia" [value]="effetto">{{effetto.name}} </mat-option>
+        <mat-option  *ngFor="let effetto of specialdatacenter.listOfEfetto" [value]="effetto">{{effetto.name}} </mat-option>
 
       </mat-select>
     </mat-form-field>

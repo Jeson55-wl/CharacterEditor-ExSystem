@@ -36,7 +36,7 @@ export class CharacterManagerService {
 
   addSpecificCharacter(character: Character)
   {
-    this.characters.push(character);
+    this.characters.push(Object.assign(Character, character));
     this.setSelectedCharacter(this.characters[this.characters.length - 1]);
   }
 
