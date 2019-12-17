@@ -1,3 +1,4 @@
+import { Character } from './../../Classes/character';
 import { CharacterManagerService } from './../../Services/character-manager.service';
 import { Component, OnInit } from '@angular/core';
 import { ElectronService } from 'ngx-electron';

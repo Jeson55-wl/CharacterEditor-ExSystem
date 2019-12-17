@@ -19,7 +19,7 @@ function createWindow () {
   win.loadFile('dist/ExSystem-CharacterEditor/index.html')
 
   // Open the DevTools.
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -39,7 +39,6 @@ console.log("It Work!");
 var folders = fs.readdirSync("Characters");
 for(i = 0; i < folders.length; i++)
 {
-  console.log("Folders: " + i);
   var data = fs.readFileSync("Characters/" + folders[i] + "/char.json");
   var parse = JSON.parse(data);
   characters.push(parse);
@@ -52,10 +51,10 @@ ipcMain.on('load-characters', function(event)
 })
 
 ipcMain.on('save-current-character', (event, arg) => {
-    console.log("charcter saved");
-    fs.existsSync("Characters/Character" + arg.CharacterID) || fs.mkdirSync("Characters/Character" + arg.CharacterID);
-    var parseData = JSON.stringify(arg);
-    fs.writeFileSync("Characters/" + "Character" + arg.CharacterID + "/char.json",parseData);
+  fs.existsSync("Characters/Character" + arg.CharacterID) || fs.mkdirSync("Characters/Character" + arg.CharacterID);
+  var parseData = JSON.stringify(arg);
+  fs.writeFileSync("Characters/" + "Character" + arg.CharacterID + "/char.json",parseData);
+  console.log("charcter saved");
 })
 
 

@@ -1,0 +1,28 @@
+.special-sheet
+{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+span
+{
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+}
+
+
+app-special{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+
+.Ability-Container
+{
+  overflow: auto;
+}

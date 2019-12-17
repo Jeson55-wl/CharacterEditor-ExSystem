@@ -70,8 +70,8 @@
 
     <div class="character-stats">
       <div fxLayout="row" >
-        <b class="pre-dot-text-1" >Caratteristiche Primarie (10 p)</b>
-        <b class="pre-dot-text-2" >Risorse (10 p)</b>
+        <b class="pre-dot-text-1" >Caratteristiche Primarie</b>
+        <b class="pre-dot-text-2" >Risorse</b>
       </div>
       <mat-divider></mat-divider>
 
@@ -186,6 +186,12 @@
     </div>
 
     <mat-divider></mat-divider>
+
+    <div class="abilita-e-spec" style="width: 100%;">
+      <div fxLayout="row" >
+        <b class="abilita-e-spec-text">Abilità e Specializzazioni</b>
+      </div>
+      <mat-divider></mat-divider>
 
   <div class="character-ability-specialization" style="margin-bottom: 50px; margin-top: 10px;">
         <app-ability *ngFor="let AbilitySpec of selectedCharacter.Ability; index as i" [abilityIndex]="i"></app-ability>

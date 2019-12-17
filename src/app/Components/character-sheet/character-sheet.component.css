@@ -41,7 +41,7 @@ div.resource > p{
 .pre-dot-text-1{
   font-size: 24px;
   margin: 16px 10%;
-  width: 42%; 
+  width: 42%;
 }
 
 .pre-dot-text-2{
@@ -134,4 +134,13 @@ div.resource > p{
 .fa-pencil-square-o{
   color: white;
   font-size: 24px;
+}
+
+
+.abilita-e-spec-text
+{
+  font-size: 24px;
+  margin: 16px 10%;
+  width: 100%;
+  text-align: center;
 }

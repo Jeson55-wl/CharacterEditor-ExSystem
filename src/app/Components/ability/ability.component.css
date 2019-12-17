@@ -19,3 +19,8 @@ span{
 .rank{
     margin-right: 4em;
 }
+
+.Ability-Container
+{
+  overflow: auto;
+}
