@@ -2,3 +2,49 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-tab-labels
+{
+  background-color: #1A638E !important;
+}
+.mat-tab-label-content
+{
+  color: white;
+}
+
+.mat-tab-label-content.mat-tab-label-active
+{
+  color: black;
+}
+
+
+.mat-tab-label
+{
+  border-radius: 10px;
+  transform: translate(0px, 10px);
+}
+
+.mat-tab-label.mat-tab-label-active
+{
+  background-color: white;
+  outline: none;
+}
+mat-ink-bar
+{visibility: hidden !important;}
+
+.mat-tab-label.mat-tab-label-active .mat-tab-label-content
+{
+  color: black;
+}
+
+.mat-tab-label-act
+
+
+.mat-drawer-side
+{
+  border-right: 0;
+}
+.mat-tab-header
+{
+  border-bottom: 0;
+}
