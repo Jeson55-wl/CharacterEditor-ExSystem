@@ -31,3 +31,7 @@ app-special{
 .accordion-marginer {
   margin-bottom: 16px;
 }
+
+.panel-color{
+  background-color: #1A638E;
+}
