@@ -7,6 +7,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 {
   background-color: #193271 !important;
 }
+
 .mat-tab-label-content
 {
   color: white;
@@ -16,7 +17,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 {
   color: black;
 }
-
 
 .mat-tab-label
 {
@@ -29,6 +29,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-color: white;
   outline: none;
 }
+
 mat-ink-bar
 {visibility: hidden !important;}
 
@@ -36,9 +37,6 @@ mat-ink-bar
 {
   color: black;
 }
-
-.mat-tab-label-act
-
 
 .mat-drawer-side
 {

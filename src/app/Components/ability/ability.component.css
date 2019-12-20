@@ -40,3 +40,19 @@ span{
 .panel-spacer{
     margin-bottom: 16px;
 }
+
+.remove-button{
+    right: 200px;
+    background-color: #D22D2D;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    min-width: 0 !important;
+    border: solid #fafafa 2px;
+}
+
+.fa{
+    font-size: 16px;
+    width: 100%;
+    margin-left: -8px;
+}

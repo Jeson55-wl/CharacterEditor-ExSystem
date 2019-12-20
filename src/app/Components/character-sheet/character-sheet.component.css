@@ -103,6 +103,8 @@ div.resource > p{
 
 .character-img {
   opacity: 1;
+  border: #005EB9 6px solid;
+  border-radius: 10%;
   transition: all 0.15s ease-in; /* transition the opacity for nice fade */
 }
 

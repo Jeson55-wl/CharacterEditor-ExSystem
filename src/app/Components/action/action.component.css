@@ -29,5 +29,5 @@
 
 
 .rating > input:checked ~ label {
-  color: #193271;
+  color: #005EB9;
 }
