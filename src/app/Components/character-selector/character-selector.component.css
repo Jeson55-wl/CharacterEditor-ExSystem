@@ -1,6 +1,6 @@
 .character
 {
-  background-color: #417797;
+  background-color: #005EB9;
   animation: slideFade 0.4s ease-out;
   border-radius: 13px;
   margin-top: 15px;
@@ -11,22 +11,27 @@
   display: inline-block;
 }
 
+.character.selected
+{
+  background-color: #038DD7;
+}
+
 .character:hover
 {
+  background-color: #0083D1;
   transition: all 0.25s;
-  background-color: #768D9A;
   box-shadow: 0px 2px 5px black;
 }
 
 .edit-button{
   position: absolute;
   top: -12px;
-  border: white 3px solid;
+  border: #fafafa 3px solid;
   right: -6px;
   z-index: 20;
   height: 40px;
   width: 40px;
-  background-color: #DE271E;
+  background-color: #D22D2D;
   border-radius: 50%;
 
   /*overrides min-width 64px from mat-button*/
@@ -35,17 +40,12 @@
 
 .edit-button i{
   transform: translate(-4px, 0px);
-  color: white;
+  color: #fafafa;
   text-align: center;
 }
 
-.character.selected
-{
-  background-color: #012E48;
-}
-
 .character > span{
-  color: #ffffff;
+  color: #fafafa;
   text-align: center;
   width: 100%;
   text-overflow: ellipsis;

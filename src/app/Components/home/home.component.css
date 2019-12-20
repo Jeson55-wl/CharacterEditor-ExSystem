@@ -17,7 +17,7 @@
 
 .SideNavContainer
 {
-  background-color: #1A638E;
+  background-color: #193271;
   width: 15%;
 }
 
@@ -30,7 +30,7 @@
 
 .button-adder
 {
-  background-color: #768D9A;
+  background-color: #038DD7;
   width: 130px;
   height: 55px;
   border-radius: 27px;
@@ -62,7 +62,7 @@
   font-size: 50px;
   color: #fafafa;
   border-radius: 50%;
-  background-color: #1A638E;
+  background-color: #193271;
   z-index: 50;
 }
 

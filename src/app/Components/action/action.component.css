@@ -24,10 +24,10 @@
 .rating:not(:checked) > label {
   float:right;
   width:1em;
-  color:#ddd;
+  color:#fafafa;
 }
 
 
 .rating > input:checked ~ label {
-  color: #004ba0;
+  color: #193271;
 }

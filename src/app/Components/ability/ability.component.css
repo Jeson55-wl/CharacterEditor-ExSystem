@@ -7,12 +7,12 @@
 
 .fa{
     font-size: 40px;
-    color: white;
+    color: #fafafa;
 }
 
 span{
     align-self: center;
-    color: white;
+    color: #fafafa;
     font-size: 24px;
 }
 
@@ -23,4 +23,8 @@ span{
 .Ability-Container
 {
   overflow: auto;
+}
+
+.panel-color{
+    background-color: #1775d1;
 }
