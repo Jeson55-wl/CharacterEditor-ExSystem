@@ -33,5 +33,9 @@ app-special{
 }
 
 .panel-color{
-  background-color: #1A638E;
+  background-color: #1A638E !important;
+}
+
+.panel-color:hover{
+  background-color: #417797 !important;
 }
