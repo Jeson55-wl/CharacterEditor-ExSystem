@@ -27,3 +27,7 @@ app-special{
 {
   overflow: auto;
 }
+
+.accordion-marginer {
+  margin-bottom: 16px;
+}
