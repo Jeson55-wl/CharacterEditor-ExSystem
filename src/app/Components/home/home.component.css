@@ -31,10 +31,7 @@
 .button-adder
 {
   background-color: #768D9A;
-  left: 20%;
-  right: 20%;
   width: 130px;
-
   height: 55px;
   border-radius: 27px;
 }
@@ -67,4 +64,9 @@
   border-radius: 50%;
   background-color: #1A638E;
   z-index: 50;
+}
+
+.symbol-color{
+  color: white;
+  font-size: 25px;
 }

@@ -3,10 +3,12 @@
   <mat-drawer class="SideNavContainer" mode="side" opened>
     <mat-list role="list">
       <app-character-selector></app-character-selector>
-      <button mat-button class="button-adder" (click)="onClickAddButton()">
-        <i class="fa fa-plus" aria-hidden="true" style="color: white; font-size: 25px;"></i>
-      </button>
-
+      
+      <div fxLayout="row" fxLayoutAlign="center center" >
+        <button mat-button class="button-adder" (click)="onClickAddButton()">
+          <i class="fa fa-plus symbol-color" aria-hidden="true"></i>
+        </button>
+      </div>
 
     </mat-list>
   </mat-drawer>
