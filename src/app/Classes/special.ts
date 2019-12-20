@@ -18,7 +18,7 @@ export class Special
     this.Name = name;
     this.Pool = pool;
     this.Punti = punti;
-    this.Descirtion = description;
+    this.Description = description;
 
     this.Rango = punti / 2;
     this.Currency = currency;
@@ -32,7 +32,7 @@ export class Special
 
   public Name: string;
   public Pool: string;
-  public Descirtion: string;
+  public Description: string;
   public Currency: string;
 
   public Punti: number;

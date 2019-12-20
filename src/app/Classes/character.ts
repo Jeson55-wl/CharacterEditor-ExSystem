@@ -62,8 +62,8 @@ export class Character
 
     spendedCurrencyPoints = 0;
 
-    TechincheCurrecyPoints: number = 0;
-    CapacitaCurrecyPoints: number  = 0;
+    TecnicheCurrencyPoints: number = 0;
+    CapacitaCurrencyPoints: number  = 0;
     PoteriCurrencyPoints: number = 0;
 
     public AddAbility(name: string, rank: number, mastery: number)
