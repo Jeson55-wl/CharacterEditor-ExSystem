@@ -2,7 +2,7 @@
     width: 100px;
     margin-top: 5px;
     margin-right: 10px;
-    background-color: grey;
+    background-color: #038DD7;
 }
 
 .fa{
@@ -26,5 +26,17 @@ span{
 }
 
 .panel-color{
-    background-color: #1775d1;
+    background-color: #005EB9 !important;
+}
+
+.panel-color:hover{
+    background-color: #0083D1 !important;
+}
+
+.panel-color.selected{
+    background-color: #77E1FF !important;
+}
+
+.panel-spacer{
+    margin-bottom: 16px;
 }

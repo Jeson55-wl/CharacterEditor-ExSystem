@@ -3,6 +3,7 @@
     height: 150px;
     margin-top: 25px;
     margin-right: 25px;
+    background-color: #fafafa;
 }
 
 .card-header{
@@ -10,7 +11,7 @@
 }
 
 .card-title{
-    color: white;
+    color: #fafafa;
     text-align: center;
     margin: 4px 0 !important;
     width: 100% !important;
@@ -26,20 +27,20 @@
     height:100%;
 }
 
-.edit-button{
+.remove-button{
     position: absolute;
     top: -20px;
     right: -20px;
     height: 40px;
     width: 40px;
-    background-color: #038DD7;
+    background-color: #D22D2D;
     border-radius: 50%;
     
     /*overrides min-width 64px from mat-button*/
     min-width: 0px !important;
 }
 
-.fa-pencil-square-o{
+.fa-minus{
     color: #fafafa;
     font-size: 20px;
     margin-left: -5px;
