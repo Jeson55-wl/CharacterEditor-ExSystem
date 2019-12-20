@@ -44,7 +44,17 @@ mat-ink-bar
 {
   border-right: 0;
 }
+
 .mat-tab-header
 {
   border-bottom: 0;
+}
+
+/*Top tab labels color consistency*/
+.mat-tab-label {
+  opacity: 1 !important;
+}
+
+.mat-tab-label.mat-tab-label-active{
+  background-color: #FAFAFA !important;
 }
