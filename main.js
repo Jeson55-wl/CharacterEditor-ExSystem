@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain} = require('electron')
+const { app, BrowserWindow, ipcMain, dialog} = require('electron')
 const fs = require('fs');
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -43,6 +43,15 @@ for(i = 0; i < folders.length; i++)
   var parse = JSON.parse(data);
   characters.push(parse);
 }
+
+
+ipcMain.on('load-image', function(event)
+{
+  console.log("HEllo Work Image Load");
+  dialog.showOpenDialog((filename)=>{
+
+  })
+});
 
 
 ipcMain.on('load-characters', function(event)

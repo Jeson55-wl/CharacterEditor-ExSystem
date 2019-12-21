@@ -22,9 +22,13 @@ export class HomeComponent implements OnInit {
         }
     });
 
+      this._electronService.ipcRenderer.on('load-image', (event, arg)=>{
+
+    });
+
+
 
   }
-
 
   onClickAddButton()
   {

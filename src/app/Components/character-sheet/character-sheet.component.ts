@@ -1,3 +1,4 @@
+import { ElectronService } from 'ngx-electron';
 import { Character } from './../../Classes/character';
 import { CharacterManagerService } from './../../Services/character-manager.service';
 import { Component, OnInit, Input } from '@angular/core';
@@ -18,7 +19,7 @@ export class CharacterSheetComponent implements OnInit {
 
   public message = "";
 
-  constructor(private _characterServiece: CharacterManagerService, public dialog: MatDialog) { }
+  constructor(private _characterServiece: CharacterManagerService, public dialog: MatDialog, private _electronService: ElectronService) { }
   ngOnInit() {
 
     this._characterServiece.CharSelectorMessage$.subscribe(message => {
@@ -28,6 +29,11 @@ export class CharacterSheetComponent implements OnInit {
           this.selectedCharacter = this._characterServiece.selectedCharacter;
         }
     })
+
+    this._electronService.ipcRenderer.on('load-image', (event, arg)=>{
+      this._characterServiece.getSelectedCharacter().image = arg;
+    });
+
 
   }
 
@@ -53,6 +59,11 @@ export class CharacterSheetComponent implements OnInit {
     this.UpdateSanita();
 
 
+  }
+
+  onSelectImage()
+  {
+    this._electronService.ipcRenderer.send('load-image');
   }
 
   onChangeRagione(rate: number)
