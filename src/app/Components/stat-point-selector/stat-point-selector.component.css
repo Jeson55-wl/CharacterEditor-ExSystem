@@ -24,21 +24,21 @@
 .rating:not(:checked) > label {
   float:right;
   width:1em;
-  color:#ddd;
+  color:#c7c7c7;
 }
 
 
 .rating > input:checked ~ label {
-  color: #004ba0;
+  color: #005EB9;
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-    color: #63a4ff;
+    color: #038DD7;
 }
 
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-    color: #1976d2;
+    color: #0083D1;
 }

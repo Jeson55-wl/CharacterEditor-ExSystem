@@ -17,45 +17,43 @@
 }
 
 .negative:not(:checked) > label {
-  float: left;;
+  float: left;
   width:1em;
-  color:grey;
+  color: #9c9c9c;
 }
 
 .positive:not(:checked) > label {
-  float: right;;
+  float: right;
   width:1em;
-  color:lightgray;
+  color:#c7c7c7;
 }
 
 .negative:not(:checked) > label:hover,
 .negative:not(:checked) > label:hover ~ label
 {
-  color: #ff6659;
+  color: #D22D2D;
 }
 .negative > input:checked ~ label {
-  color: #9a0007;
+  color: #D22D2D;
 }
 
 .negative > input:checked ~ label:hover,
 .negative > input:checked ~ label:hover ~ label,
 .negative > label:hover ~ input:checked ~ label {
-    color: #d32f2f;
+    color: #D22D2D;
 }
 
 .positive > input:checked ~ label {
-  color: #004ba0;
+  color: #005EB9;
 }
-
-
 
 .positive:not(:checked) > label:hover,
 .positive:not(:checked) > label:hover ~ label {
-    color: #63a4ff;
+    color: #038DD7;
 }
 
 .positive > input:checked ~ label:hover,
 .positive > input:checked ~ label:hover ~ label,
 .positive > label:hover ~ input:checked ~ label {
-    color: #1976d2;
+    color: #0083D1;
 }

@@ -59,8 +59,7 @@
         </mat-form-field>
 
         <mat-form-field class="chr-text-input">
-          <textarea matInput placeholder="Descrizione" rows="24"
-            [(ngModel)]="selectedCharacter.Description"></textarea>
+          <textarea matInput placeholder="Descrizione" rows="24" [(ngModel)]="selectedCharacter.Description"></textarea>
         </mat-form-field>
       </div>
 
@@ -69,9 +68,9 @@
     <mat-divider></mat-divider>
 
     <div class="character-stats">
-      <div fxLayout="row" >
-        <b class="pre-dot-text-1" >Caratteristiche Primarie</b>
-        <b class="pre-dot-text-2" >Risorse</b>
+      <div fxLayout="row">
+        <b class="pre-dot-text-1">Caratteristiche Primarie</b>
+        <b class="pre-dot-text-2">Risorse</b>
       </div>
       <mat-divider></mat-divider>
 
@@ -81,8 +80,7 @@
 
             <div fxLayout="row" class="stat">
               <p>Coordinazione: {{message}} </p>
-              <app-stat-point-selector class="points" [itemId]="1"
-                [rating]="selectedCharacter.Coordinazione"
+              <app-stat-point-selector class="points" [itemId]="1" [rating]="selectedCharacter.Coordinazione"
                 (childEvent)="selectedCharacter.Coordinazione = $event"></app-stat-point-selector>
             </div>
 
@@ -188,18 +186,16 @@
     <mat-divider></mat-divider>
 
     <div class="abilita-e-spec" style="width: 100%;">
-      <div fxLayout="row" >
+      <div fxLayout="row">
         <b class="abilita-e-spec-text">Abilità e Specializzazioni</b>
       </div>
       <mat-divider></mat-divider>
 
-  <div class="character-ability-specialization" style="margin-bottom: 50px; margin-top: 10px;">
+      <div class="character-ability-specialization" style="margin-bottom: 50px; margin-top: 10px;">
         <app-ability *ngFor="let AbilitySpec of selectedCharacter.Ability; index as i" [abilityIndex]="i"></app-ability>
-        <button mat-button style="background-color: grey; width: 100%; margin-top: 1;" (click)="AddAbility()"><i class="fa fa-plus" aria-hidden="true"></i></button>
-
+        <button mat-button style="background-color: #0083D1; width: 100%;" (click)="AddAbility()">
+          <i class="fa fa-plus" aria-hidden="true" style="color: #fafafa;"></i>
+        </button>
+      </div>
     </div>
-
-
-
   </div>
-</div>

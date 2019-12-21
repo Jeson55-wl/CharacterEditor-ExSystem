@@ -15,9 +15,9 @@ export class SpecialSheetComponent implements OnInit {
   constructor(public dialog: MatDialog, private _characterServie: CharacterManagerService) { }
 
 
-  public TechincheCurrecyPoints: number;
-  public CapacitaCurrecyPoints: number;
-  public PoteriCurrecyPoints: number;
+  public TecnicheCurrencyPoints: number;
+  public CapacitaCurrencyPoints: number;
+  public PoteriCurrencyPoints: number;
 
   public PuntiSpesi: number;
 
@@ -351,45 +351,45 @@ export class SpecialSheetComponent implements OnInit {
 
 
 
-  addTechinchePoint() {
-    this._characterServie.selectedCharacter.TechincheCurrecyPoints++;
+  addTecnichePoint() {
+    this._characterServie.selectedCharacter.TecnicheCurrencyPoints++;
     this._characterServie.selectedCharacter.spendedCurrencyPoints++;
-    this.TechincheCurrecyPoints = this._characterServie.selectedCharacter.TechincheCurrecyPoints;
+    this.TecnicheCurrencyPoints = this._characterServie.selectedCharacter.TecnicheCurrencyPoints;
     this.PuntiSpesi = this._characterServie.selectedCharacter.spendedCurrencyPoints;
   }
 
-  removeTechinchePoint() {
-    this._characterServie.selectedCharacter.TechincheCurrecyPoints--;
+  removeTecnichePoint() {
+    this._characterServie.selectedCharacter.TecnicheCurrencyPoints--;
     this._characterServie.selectedCharacter.spendedCurrencyPoints--;
-    this.TechincheCurrecyPoints = this._characterServie.selectedCharacter.TechincheCurrecyPoints;
+    this.TecnicheCurrencyPoints = this._characterServie.selectedCharacter.TecnicheCurrencyPoints;
     this.PuntiSpesi = this._characterServie.selectedCharacter.spendedCurrencyPoints;
   }
 
   addCapacitaPoint() {
-    this._characterServie.selectedCharacter.CapacitaCurrecyPoints++;
+    this._characterServie.selectedCharacter.CapacitaCurrencyPoints++;
     this._characterServie.selectedCharacter.spendedCurrencyPoints++;
-    this.CapacitaCurrecyPoints = this._characterServie.selectedCharacter.CapacitaCurrecyPoints;
+    this.CapacitaCurrencyPoints = this._characterServie.selectedCharacter.CapacitaCurrencyPoints;
     this.PuntiSpesi = this._characterServie.selectedCharacter.spendedCurrencyPoints;
   }
 
   removeCapacitaPoint() {
-    this._characterServie.selectedCharacter.CapacitaCurrecyPoints--;
+    this._characterServie.selectedCharacter.CapacitaCurrencyPoints--;
     this._characterServie.selectedCharacter.spendedCurrencyPoints--;
-    this.CapacitaCurrecyPoints = this._characterServie.selectedCharacter.CapacitaCurrecyPoints;
+    this.CapacitaCurrencyPoints = this._characterServie.selectedCharacter.CapacitaCurrencyPoints;
     this.PuntiSpesi = this._characterServie.selectedCharacter.spendedCurrencyPoints;
   }
 
   addPoteriPoint() {
     this._characterServie.selectedCharacter.PoteriCurrencyPoints++;
     this._characterServie.selectedCharacter.spendedCurrencyPoints++;
-    this.PoteriCurrecyPoints = this._characterServie.selectedCharacter.PoteriCurrencyPoints;
+    this.PoteriCurrencyPoints = this._characterServie.selectedCharacter.PoteriCurrencyPoints;
     this.PuntiSpesi = this._characterServie.selectedCharacter.spendedCurrencyPoints;
   }
 
   removePoteriPoint() {
     this._characterServie.selectedCharacter.PoteriCurrencyPoints--;
     this._characterServie.selectedCharacter.spendedCurrencyPoints--;
-    this.PoteriCurrecyPoints = this._characterServie.selectedCharacter.PoteriCurrencyPoints;
+    this.PoteriCurrencyPoints = this._characterServie.selectedCharacter.PoteriCurrencyPoints;
     this.PuntiSpesi = this._characterServie.selectedCharacter.spendedCurrencyPoints;
   }
 

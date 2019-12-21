@@ -5,8 +5,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mat-tab-labels
 {
-  background-color: #1A638E !important;
+  background-color: #193271 !important;
 }
+
 .mat-tab-label-content
 {
   color: white;
@@ -16,7 +17,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 {
   color: black;
 }
-
 
 .mat-tab-label
 {
@@ -29,6 +29,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-color: white;
   outline: none;
 }
+
 mat-ink-bar
 {visibility: hidden !important;}
 
@@ -37,14 +38,21 @@ mat-ink-bar
   color: black;
 }
 
-.mat-tab-label-act
-
-
 .mat-drawer-side
 {
   border-right: 0;
 }
+
 .mat-tab-header
 {
   border-bottom: 0;
+}
+
+/*Top tab labels color consistency*/
+.mat-tab-label {
+  opacity: 1 !important;
+}
+
+.mat-tab-label.mat-tab-label-active{
+  background-color: #FAFAFA !important;
 }

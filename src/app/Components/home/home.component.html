@@ -1,36 +1,37 @@
 <mat-drawer-container class="App-Divider">
-    <!--SideNav Container-->
-    <mat-drawer class="SideNavContainer" mode="side" opened>
-        <mat-list role="list">
-            <app-character-selector></app-character-selector>
-            <button mat-button class="button-adder" (click)="onClickAddButton()" >
-              <i class="fa fa-plus" aria-hidden="true" style="color: white; font-size: 25px;"></i>
-            </button>
+  <!--SideNav Container-->
+  <mat-drawer class="SideNavContainer" mode="side" opened>
+    <mat-list role="list">
+      <app-character-selector></app-character-selector>
+      
+      <div fxLayout="row" fxLayoutAlign="center center" >
+        <button mat-button class="button-adder" (click)="onClickAddButton()">
+          <i class="fa fa-plus symbol-color" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </mat-list>
+  </mat-drawer>
 
 
-        </mat-list>
-    </mat-drawer>
+  <!--Editor per la scheda-->
+  <mat-drawer-content class="char-sheet-content">
+    <mat-tab-group>
 
+      <mat-tab label="Scheda">
+        <app-character-sheet></app-character-sheet>
+      </mat-tab>
 
-    <!--Editor per la scheda-->
-    <mat-drawer-content class="char-sheet-content">
-            <mat-tab-group>
+      <mat-tab label="Special">
+        <app-special-sheet></app-special-sheet>
+      </mat-tab>
 
-                <mat-tab label="Scheda">
-                    <app-character-sheet></app-character-sheet>
-                </mat-tab>
-
-                <mat-tab label="Spacial">
-                    <app-special-sheet></app-special-sheet>
-                </mat-tab>
-
-                <mat-tab label="Inventario">
-                    In Lavorazione
-                </mat-tab>
-            </mat-tab-group>
-            <button mat-button class="SaveButton" (click)="SaveCurrentCharacter()"> <i class="fa fa-floppy-o" aria-hidden="true"></i> </button>
-    </mat-drawer-content>
+      <mat-tab label="Inventario">
+        In Lavorazione
+      </mat-tab>
+    </mat-tab-group>
+    <button mat-button class="SaveButton" (click)="SaveCurrentCharacter()"> <i class="fa fa-floppy-o"
+        aria-hidden="true"></i> </button>
+  </mat-drawer-content>
 
 </mat-drawer-container>
-
-

@@ -2,170 +2,155 @@
   <p>CurrentPoints: {{selectedCharacter.spendedCurrencyPoints}}</p>
   <div class="currency" fxLayout="column">
     <div fxLayout="row">
-      <p>Tecniche: {{selectedCharacter.TechincheCurrecyPoints}}</p>
-      <button mat-button (click)="addTechinchePoint()"><i class="fa fa-plus" aria-hidden="true" ></i></button>
-      <button mat-button (click)="removeTechinchePoint()"><i class="fa fa-minus" aria-hidden="true"></i></button>
-
+      <p fxFlex="10">Tecniche: {{selectedCharacter.TecnicheCurrencyPoints}}</p>
+      <button mat-button (click)="addTecnichePoint()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button mat-button (click)="removeTecnichePoint()"><i class="fa fa-minus" aria-hidden="true"></i></button>
     </div>
     <div fxLayout="row">
-      <p>Capacità: {{selectedCharacter.CapacitaCurrecyPoints}}</p>
-      <button mat-button (click)="addCapacitaPoint()"><i class="fa fa-plus" aria-hidden="true" ></i></button>
+      <p fxFlex="10">Capacità: {{selectedCharacter.CapacitaCurrencyPoints}}</p>
+      <button mat-button (click)="addCapacitaPoint()"><i class="fa fa-plus" aria-hidden="true"></i></button>
       <button mat-button (click)="removeCapacitaPoint()"><i class="fa fa-minus" aria-hidden="true"></i></button>
     </div>
     <div fxLayout="row">
-      <p>Poteri: {{selectedCharacter.PoteriCurrencyPoints}}</p>
-      <button mat-button (click)="addPoteriPoint()"><i class="fa fa-plus" aria-hidden="true" ></i></button>
+      <p fxFlex="10">Poteri: {{selectedCharacter.PoteriCurrencyPoints}}</p>
+      <button mat-button (click)="addPoteriPoint()"><i class="fa fa-plus" aria-hidden="true"></i></button>
       <button mat-button (click)="removePoteriPoint()"><i class="fa fa-minus" aria-hidden="true"></i></button>
     </div>
-
   </div>
 
-
-
-
-
   <!--Special Rank 1-->
-    <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header style="background-color: #1775d1; ">
-            <mat-panel-description class="special-rank">
-              <span> Ⅰ </span>
-            </mat-panel-description>
-          </mat-expansion-panel-header>
+  <mat-accordion>
+    <mat-expansion-panel class="accordion-marginer">
+      <mat-expansion-panel-header class="panel-color">
+        <mat-panel-description class="special-rank">
+          <span> Ⅰ </span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
 
-          <!--Lista di Special-->
-          <div class="Ability-Container" fxLayout="row">
-            <!--<app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specialIndex]="i"></app-specialization>-->
-            <div fxLayout="row">
-              <app-special *ngFor="let special of selectedCharacter.specialRank1" [special]="special"></app-special>
-              <button mat-button class="add-button" (click)="AddSpecialRank1()">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </button>
-            </div>
+      <!--Lista di Special-->
+      <div class="Ability-Container" fxLayout="row">
+        <div fxLayout="row">
+          <app-special *ngFor="let special of selectedCharacter.specialRank1" [special]="special"></app-special>
+          <button mat-button class="add-button" (click)="AddSpecialRank1()">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </mat-expansion-panel>
 
+  </mat-accordion>
 
-          </div>
-        </mat-expansion-panel>
+  <!--Special Rank 2-->
+  <mat-accordion>
+    <mat-expansion-panel class="accordion-marginer">
+      <mat-expansion-panel-header class="panel-color">
+        <mat-panel-description class="special-rank">
+          <span> Ⅱ </span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
 
-      </mat-accordion>
+      <!--Lista di Special-->
+      <div class="Ability-Container" fxLayout="row">
 
-       <!--Special Rank 2-->
-    <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header style="background-color: #1775d1; ">
-            <mat-panel-description class="special-rank">
-              <span> Ⅱ </span>
-            </mat-panel-description>
-          </mat-expansion-panel-header>
+        <app-special *ngFor="let special of selectedCharacter.specialRank2" [special]="special"></app-special>
+        <button mat-button class="add-button" (click)="AddSpecialRank2()">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
 
-          <!--Lista di Special-->
-          <div class="Ability-Container" fxLayout="row">
-            <!--<app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specialIndex]="i"></app-specialization>-->
+      </div>
+    </mat-expansion-panel>
 
-            <app-special *ngFor="let special of selectedCharacter.specialRank2" [special]="special"></app-special>
-            <button mat-button class="add-button" (click)="AddSpecialRank2()">
-              <i class="fa fa-plus" aria-hidden="true"></i>
-            </button>
-
-          </div>
-        </mat-expansion-panel>
-
-      </mat-accordion>
+  </mat-accordion>
 
 
-       <!--Special Rank 3-->
-    <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header style="background-color: #1775d1; ">
-            <mat-panel-description class="special-rank">
-              <span> Ⅲ </span>
-            </mat-panel-description>
-          </mat-expansion-panel-header>
+  <!--Special Rank 3-->
+  <mat-accordion>
+    <mat-expansion-panel class="accordion-marginer">
+      <mat-expansion-panel-header class="panel-color">
+        <mat-panel-description class="special-rank">
+          <span> Ⅲ </span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
 
-          <!--Lista di Special-->
-          <div class="Ability-Container" fxLayout="row">
-            <!--<app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specialIndex]="i"></app-specialization>-->
+      <!--Lista di Special-->
+      <div class="Ability-Container" fxLayout="row">
 
-            <app-special *ngFor="let special of selectedCharacter.specialRank3" [special]="special"></app-special>
-            <button mat-button class="add-button" (click)="AddSpecialRank3()">
-              <i class="fa fa-plus" aria-hidden="true"></i>
-            </button>
-          </div>
-        </mat-expansion-panel>
+        <app-special *ngFor="let special of selectedCharacter.specialRank3" [special]="special"></app-special>
+        <button mat-button class="add-button" (click)="AddSpecialRank3()">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+      </div>
+    </mat-expansion-panel>
 
-      </mat-accordion>
+  </mat-accordion>
 
 
 
-       <!--Special Rank 4-->
-    <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header style="background-color: #1775d1; ">
-            <mat-panel-description class="special-rank">
-              <span> Ⅳ </span>
-            </mat-panel-description>
-          </mat-expansion-panel-header>
+  <!--Special Rank 4-->
+  <mat-accordion>
+    <mat-expansion-panel class="accordion-marginer">
+      <mat-expansion-panel-header class="panel-color">
+        <mat-panel-description class="special-rank">
+          <span> Ⅳ </span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
 
-          <!--Lista di Special-->
-          <div class="Ability-Container" fxLayout="row">
-            <!--<app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specialIndex]="i"></app-specialization>-->
+      <!--Lista di Special-->
+      <div class="Ability-Container" fxLayout="row">
 
-            <app-special *ngFor="let special of selectedCharacter.specialRank4" [special]="special"></app-special>
-            <button mat-button class="add-button" (click)="AddSpecialRank4()">
-              <i class="fa fa-plus" aria-hidden="true"></i>
-            </button>
+        <app-special *ngFor="let special of selectedCharacter.specialRank4" [special]="special"></app-special>
+        <button mat-button class="add-button" (click)="AddSpecialRank4()">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
 
-          </div>
-        </mat-expansion-panel>
+      </div>
+    </mat-expansion-panel>
 
-      </mat-accordion>
+  </mat-accordion>
 
-       <!--Special Rank 5-->
-    <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header style="background-color: #1775d1; ">
-            <mat-panel-description class="special-rank">
-              <span> Ⅴ </span>
-            </mat-panel-description>
-          </mat-expansion-panel-header>
+  <!--Special Rank 5-->
+  <mat-accordion>
+    <mat-expansion-panel class="accordion-marginer">
+      <mat-expansion-panel-header class="panel-color">
+        <mat-panel-description class="special-rank">
+          <span> Ⅴ </span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
 
-          <!--Lista di Special-->
-          <div class="Ability-Container" fxLayout="row">
-            <!--<app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specialIndex]="i"></app-specialization>-->
+      <!--Lista di Special-->
+      <div class="Ability-Container" fxLayout="row">
 
-            <app-special *ngFor="let special of selectedCharacter.specialRank5" [special]="special"></app-special>
-            <button mat-button class="add-button" (click)="AddSpecialRank5()">
-              <i class="fa fa-plus" aria-hidden="true"></i>
-            </button>
+        <app-special *ngFor="let special of selectedCharacter.specialRank5" [special]="special"></app-special>
+        <button mat-button class="add-button" (click)="AddSpecialRank5()">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
 
-          </div>
-        </mat-expansion-panel>
+      </div>
+    </mat-expansion-panel>
 
-      </mat-accordion>
+  </mat-accordion>
 
-       <!--Special Rank 6-->
-    <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header style="background-color: #1775d1; ">
-            <mat-panel-description class="special-rank">
-              <span> Ⅵ </span>
-            </mat-panel-description>
-          </mat-expansion-panel-header>
+  <!--Special Rank 6-->
+  <mat-accordion>
+    <mat-expansion-panel class="accordion-marginer">
+      <mat-expansion-panel-header class="panel-color">
+        <mat-panel-description class="special-rank">
+          <span> Ⅵ </span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
 
-          <!--Lista di Special-->
-          <div class="Ability-Container" fxLayout="row">
-            <!--<app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specialIndex]="i"></app-specialization>-->
+      <!--Lista di Special-->
+      <div class="Ability-Container" fxLayout="row">
 
+        <app-special *ngFor="let special of selectedCharacter.specialRank6" [special]="special"></app-special>
+        <button mat-button class="add-button" (click)="AddSpecialRank6()">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
 
-            <app-special *ngFor="let special of selectedCharacter.specialRank6" [special]="special"></app-special>
-            <button mat-button class="add-button" (click)="AddSpecialRank6()">
-              <i class="fa fa-plus" aria-hidden="true"></i>
-            </button>
+      </div>
+    </mat-expansion-panel>
 
-          </div>
-        </mat-expansion-panel>
-
-      </mat-accordion>
+  </mat-accordion>
 
 
 

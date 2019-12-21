@@ -2,6 +2,7 @@
 {
   font-size: 20px;
   font-weight: bold;
+  margin: 16px;
 }
 
 
@@ -25,4 +26,16 @@ app-special{
 .Ability-Container
 {
   overflow: auto;
+}
+
+.accordion-marginer {
+  margin-bottom: 16px;
+}
+
+.panel-color{
+  background-color: #005EB9 !important;
+}
+
+.panel-color:hover{
+  background-color: #0083D1 !important;
 }
