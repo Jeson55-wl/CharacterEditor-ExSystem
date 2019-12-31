@@ -57,7 +57,7 @@ ipcMain.on('load-image', (event, arg) => {
     event.sender.send('load-image',__dirname + "\\Characters\\Character" + arg.CharacterID + "\\img.png");
   });
 
-  event.sender.send('load-image',__dirname + "\\Characters\\Character" + arg.CharacterID + "\\img.png");
+  //event.sender.send('load-image',__dirname + "\\Characters\\Character" + arg.CharacterID + "\\img.png");
 })
 
 

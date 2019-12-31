@@ -31,7 +31,7 @@ export class CharacterSelectorComponent implements OnInit {
 
   Update()
   {
-    this.cdRef.detectChanges();
+    //this.cdRef.detectChanges();
   }
 
   Remove(CharacterID: number)

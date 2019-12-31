@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
   onClickAddButton()
   {
     this._characterServie.addCharacter();
+    this.SaveCurrentCharacter();
   }
 
   SaveCurrentCharacter()
