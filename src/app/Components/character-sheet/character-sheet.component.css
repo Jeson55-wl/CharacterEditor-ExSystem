@@ -105,7 +105,12 @@ div.resource > p{
   opacity: 1;
   border: #005EB9 6px solid;
   border-radius: 10%;
+  width: 400px;
+  height: 400px;
   transition: all 0.15s ease-in; /* transition the opacity for nice fade */
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  object-fit: cover;
 }
 
 .character-item:hover .character-img {

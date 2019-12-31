@@ -2,7 +2,9 @@
   <div class="character" *ngFor="let Character of characters"
     [class.selected]="Character === slectedCharacter"
     (click)="onSelect(Character)" fxLayout="row" fxLayoutAlign="start center">
-    <img src="https://via.placeholder.com/60" alt="placeholder">
+
+    <img [src]="getImage(Character)" alt="placeholder">
+
     <span>{{Character.CharacterName}}</span>
     <button mat-button class="edit-button">
       <i class="fa fa-minus" aria-hidden="true"></i>

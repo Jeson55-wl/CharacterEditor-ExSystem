@@ -21,4 +21,9 @@ export class SpecializationComponent implements OnInit {
     this.specialization = this._characterServiece.getSelectedCharacter().Ability[this.abilityIndexs].specials[this.specializationIndex];
   }
 
+  Remove()
+  {
+    this._characterServiece.getSelectedCharacter().Ability[this.abilityIndexs].RemoveSpecia(this.specializationIndex);
+  }
+
 }

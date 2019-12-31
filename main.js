@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, dialog} = require('electron')
+const { app, BrowserWindow, ipcMain,dialog } = require('electron')
 const fs = require('fs');
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -19,7 +19,7 @@ function createWindow () {
   win.loadFile('dist/ExSystem-CharacterEditor/index.html')
 
   // Open the DevTools.
-  //win.webContents.openDevTools()
+  win.webContents.openDevTools()
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -45,14 +45,20 @@ for(i = 0; i < folders.length; i++)
 }
 
 
-ipcMain.on('load-image', function(event)
-{
-  console.log("HEllo Work Image Load");
-  dialog.showOpenDialog((filename)=>{
 
-  })
-});
 
+
+ipcMain.on('load-image', (event, arg) => {
+
+  console.log(__dirname + "\\Characters\\Character" + arg.CharacterID + "\\img.png")
+  dialog.showOpenDialog().then((filePath) =>
+  {
+    fs.copyFileSync(filePath['filePaths'][0], "Characters/Character" + arg.CharacterID + "/img.png")
+    event.sender.send('load-image',__dirname + "\\Characters\\Character" + arg.CharacterID + "\\img.png");
+  });
+
+  event.sender.send('load-image',__dirname + "\\Characters\\Character" + arg.CharacterID + "\\img.png");
+})
 
 ipcMain.on('load-characters', function(event)
 {

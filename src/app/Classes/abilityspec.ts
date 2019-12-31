@@ -15,7 +15,7 @@ export class Abilityspec
   }
 
 
-  RemoveSpecia(index: number)
+  public RemoveSpecia(index: number)
   {
     this.specials.splice(index);
   }

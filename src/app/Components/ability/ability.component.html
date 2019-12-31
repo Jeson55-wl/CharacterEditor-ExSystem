@@ -2,10 +2,10 @@
   <mat-expansion-panel class="panel-spacer">
     <mat-expansion-panel-header class="panel-color">
       <!-- Remove Button -->
-      <button mat-button class="remove-button">
+      <button mat-button class="remove-button" (click)="Remove()">
         <i class="fa fa-minus" aria-hidden="true"></i>
       </button>
-      
+
       <mat-panel-title>
         <span class="rank">Rank: {{Ability.Rank}}</span>
         <span>Mastery: {{Ability.Mastery}}</span>
@@ -14,7 +14,7 @@
         <span> Nome: {{Ability.Name}} </span>
       </mat-panel-description>
     </mat-expansion-panel-header>
-    
+
     <!--Lista di specializzazioni-->
     <div class="Ability-Container" fxLayout="row">
       <app-specialization *ngFor="let AbilitySpec of Ability.specials; index as i" [specializationIndex]="i" [abilityIndexs]="abilityIndex"></app-specialization>

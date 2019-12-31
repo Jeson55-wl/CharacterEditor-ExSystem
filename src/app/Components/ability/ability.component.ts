@@ -23,6 +23,11 @@ export class AbilityComponent implements OnInit {
     this.Ability = this._characterServiece.getSelectedCharacter().Ability[this.abilityIndex];
   }
 
+  Remove()
+  {
+    this._characterServiece.getSelectedCharacter().RemoveAbility(this.abilityIndex);
+  }
+
   AddSpecialization()
   {
     let Name: string;

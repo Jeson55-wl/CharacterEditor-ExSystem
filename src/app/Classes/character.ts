@@ -8,7 +8,7 @@ export class Character
 
 
     //Base Description
-    image: string;
+    image: string = "https://via.placeholder.com/410";
 
     Race: string;
     Sex: string;
@@ -71,6 +71,10 @@ export class Character
       this.Ability.push(new Abilityspec(rank, name, mastery));
     }
 
+    public RemoveAbility(index: number)
+    {
+      this.Ability.splice(index);
+    }
 
 
 

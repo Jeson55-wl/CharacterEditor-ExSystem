@@ -6,7 +6,7 @@
     <div class="character-base-information" fxLayout="row" flex>
       <!-- Immagine del personaggio -->
       <div class="character-item">
-        <img src="https://via.placeholder.com/412" class="character-img" alt="">
+        <img *ngIf="true" [src]="getImage()" class="character-img" alt="">
         <button mat-button class="image-button" (click)="onSelectImage()">
           <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
         </button>
