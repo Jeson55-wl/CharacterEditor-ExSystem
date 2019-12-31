@@ -1,7 +1,20 @@
-
+.rating
+{
+  float:left;
+  width: 100%;
+  align-content: center;
+  align-self: center;
+  height: 100%;
+}
 
 .rating input{
   display: none;
+}
+
+.rating label
+{
+  display: block;
+  font-size: 21px;
 }
 
 .rating label::before
@@ -40,7 +53,7 @@
 .negative > input:checked ~ label:hover,
 .negative > input:checked ~ label:hover ~ label,
 .negative > label:hover ~ input:checked ~ label {
-    color: #D22D2D;
+  color: #D22D2D;
 }
 
 .positive > input:checked ~ label {
@@ -49,11 +62,11 @@
 
 .positive:not(:checked) > label:hover,
 .positive:not(:checked) > label:hover ~ label {
-    color: #038DD7;
+  color: #038DD7;
 }
 
 .positive > input:checked ~ label:hover,
 .positive > input:checked ~ label:hover ~ label,
 .positive > label:hover ~ input:checked ~ label {
-    color: #0083D1;
+  color: #0083D1;
 }

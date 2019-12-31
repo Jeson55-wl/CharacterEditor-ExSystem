@@ -5,7 +5,6 @@
   margin: 16px;
 }
 
-
 span
 {
   color: white;
@@ -15,13 +14,11 @@ span
   text-align: center;
 }
 
-
 app-special{
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
 }
-
 
 .Ability-Container
 {
@@ -38,4 +35,13 @@ app-special{
 
 .panel-color:hover{
   background-color: #0083D1 !important;
+}
+
+.add-button{
+  background-color: #0083D1;
+  margin-top: 16px;
+}
+
+.add-button .fa-plus{
+  color: #fafafa;
 }

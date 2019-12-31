@@ -18,14 +18,14 @@
   text-align: center !important;
 }
 
-.resources
-{
-  width: 20%;
-}
-
 .primary-stat
 {
-  width: 60%;
+  width: 50%;
+}
+
+.resources
+{
+  width: 25%;
 }
 
 div.resource > p{
@@ -41,7 +41,7 @@ div.resource > p{
 .pre-dot-text-1{
   font-size: 24px;
   margin: 16px 10%;
-  width: 42%;
+  width: 30%;
 }
 
 .pre-dot-text-2{
@@ -69,6 +69,10 @@ div.resource > p{
   margin-top: 30px;
   margin-bottom: 10px;
   margin-left: 30px;
+}
+
+p {
+  font-size: 21px;
 }
 
 .auto-stats{

@@ -5,14 +5,13 @@
   align-content: center;
 }
 
-
 .rating input{
   display: none;
 }
 
 .rating label
 {
-    display: block;
+  display: block;
 }
 
 .rating label::before
@@ -27,18 +26,17 @@
   color:#c7c7c7;
 }
 
-
 .rating > input:checked ~ label {
   color: #005EB9;
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-    color: #038DD7;
+  color: #038DD7;
 }
 
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-    color: #0083D1;
+  color: #0083D1;
 }

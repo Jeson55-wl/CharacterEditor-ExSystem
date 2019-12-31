@@ -130,24 +130,24 @@
           </div>
         </div>
 
-        <div class="resources" fxLayout="column" fxLayoutAlign="center center">
-          <div class="resource">
-            <p>Possedimenti</p>
+        <div class="resources" fxLayout="column" >
+          <div fxLayout="row" class="resource" fxLayoutAlign="space-between center">
+            <p fxLayoutAlign="start center" >Possedimenti: </p>
             <app-resource-point-selector [itemId]="10" [rating]="selectedCharacter.Possedimenti"
               (childEvent)="selectedCharacter.Possedimenti = $event"></app-resource-point-selector>
           </div>
-          <div class="resource">
-            <p>Alleati</p>
+          <div fxLayout="row" class="resource" fxLayoutAlign="space-between center">
+            <p fxLayoutAlign="start center" >Alleati: </p>
             <app-resource-point-selector [itemId]="11" [rating]="selectedCharacter.Alleati"
               (childEvent)="selectedCharacter.Alleati = $event"></app-resource-point-selector>
           </div>
-          <div class="resource">
-            <p>Potere</p>
+          <div fxLayout="row" class="resource" fxLayoutAlign="space-between center">
+            <p fxLayoutAlign="start center" >Potere: </p>
             <app-resource-point-selector [itemId]="12" [rating]="selectedCharacter.Potere"
               (childEvent)="selectedCharacter.Potere = $event"></app-resource-point-selector>
           </div>
-          <div class="resource">
-            <p>Reputazione</p>
+          <div fxLayout="row" class="resource" fxLayoutAlign="space-between center">
+            <p fxLayoutAlign="start center" >Reputazione: </p>
             <app-resource-point-selector [itemId]="13" [rating]="selectedCharacter.Reputazione"
               (childEvent)="selectedCharacter.Reputazione = $event"></app-resource-point-selector>
           </div>
@@ -161,12 +161,12 @@
     <mat-divider></mat-divider>
 
     <div class="character-stats auto-stats" fxLayout="row" fxLayoutAlign="space-between center">
-      <div fxLayout="column" fxFlex="30">
+      <div fxLayout="column" fxFlex="33">
         <span>Resistenza Fisica: {{selectedCharacter.ResistenzaFisica}}</span>
         <span>Resistenza Mentale: {{selectedCharacter.ResistenzaMentale}}</span>
       </div>
 
-      <div fxLayout="column" fxFlex="35">
+      <div fxLayout="column" fxFlex="33">
         <span> Salute: {{selectedCharacter.Salute}}</span>
         <span> Sanita: {{selectedCharacter.Sanita}}</span>
       </div>

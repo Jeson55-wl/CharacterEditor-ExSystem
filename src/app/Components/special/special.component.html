@@ -1,24 +1,30 @@
-<mat-card>
+<mat-card class="special-body">
+  <!-- Remove Button -->
+  <button mat-button class="remove-button">
+    <i class="fa fa-minus" aria-hidden="true"></i>
+  </button>
+  
   <mat-card-title>
     <H2>Name: {{special.Name}}</H2>
   </mat-card-title>
   <div fxLayout="column">
-    <h3>Description:</h3> <h4>{{special.Description}}</h4>
+    <h3>Description:</h3>
+    <h4>{{special.Description}}</h4>
     <h3>Pool: {{special.Pool}}</h3>
     <h3>Rank: {{special.Rango}}</h3>
 
-  <mat-form-field class="example-chip-list">
-    <p>Manifestazione</p>
-    <mat-chip-list #chipList aria-label="Manifestazione">
-      <div *ngFor="let manifestazione of special.Manifestazione">
-        <mat-chip *ngIf="manifestazione">
-          <div>{{checkStat(manifestazione.name)}}</div>
-        </mat-chip>
-      </div>
-    </mat-chip-list>
-  </mat-form-field>
+    <mat-form-field class="example-chip-list">
+      <p>Manifestazione</p>
+      <mat-chip-list #chipList aria-label="Manifestazione">
+        <div *ngFor="let manifestazione of special.Manifestazione">
+          <mat-chip *ngIf="manifestazione">
+            <div>{{checkStat(manifestazione.name)}}</div>
+          </mat-chip>
+        </div>
+      </mat-chip-list>
+    </mat-form-field>
 
-  <mat-form-field class="example-chip-list">
+    <mat-form-field class="example-chip-list">
       <p>Durata</p>
       <mat-chip-list #chipList aria-label="Durata">
         <div *ngFor="let durata of special.Durata">
@@ -30,7 +36,7 @@
     </mat-form-field>
 
 
-  <mat-form-field class="example-chip-list">
+    <mat-form-field class="example-chip-list">
       <p>Tipologia</p>
       <mat-chip-list #chipList aria-label="Tipologia">
         <div *ngFor="let tipologia of special.Tipologia">
@@ -42,7 +48,7 @@
     </mat-form-field>
 
 
-  <mat-form-field class="example-chip-list">
+    <mat-form-field class="example-chip-list">
       <p>Effetto</p>
       <mat-chip-list #chipList aria-label="Effetto">
         <div *ngFor="let effetto of special.Effetto">
