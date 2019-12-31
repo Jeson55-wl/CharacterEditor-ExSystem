@@ -1,0 +1,25 @@
+.remove-button{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    height: 40px;
+    width: 40px;
+    background-color: #D22D2D;
+    border-radius: 50%;
+    
+    box-shadow: 0px 0px 8px rgb(129, 129, 129);
+    
+    /*overrides min-width 64px from mat-button*/
+    min-width: 0px !important;
+}
+
+.fa-minus{
+    color: #fafafa;
+    font-size: 20px;
+    margin-left: -5px;
+}
+
+.special-body{
+    margin-top: 16px;
+    margin-right: 16px;
+}
