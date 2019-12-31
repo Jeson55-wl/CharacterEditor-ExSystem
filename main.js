@@ -60,16 +60,35 @@ ipcMain.on('load-image', (event, arg) => {
   event.sender.send('load-image',__dirname + "\\Characters\\Character" + arg.CharacterID + "\\img.png");
 })
 
+
+ipcMain.on('remove-character', (event, arg) => {
+
+  path = "Characters/Character" + arg;
+
+  if( fs.existsSync(path) ) {
+    fs.readdirSync(path).forEach(function(file,index){
+      var curPath = path + "/" + file;
+      if(fs.lstatSync(curPath).isDirectory()) { // recurse
+        deleteFolderRecursive(curPath);
+      } else { // delete file
+        fs.unlinkSync(curPath);
+      }
+    });
+    fs.rmdirSync(path);
+  }
+})
+
 ipcMain.on('load-characters', function(event)
 {
   event.sender.send('load-characters', characters);
 })
 
 ipcMain.on('save-current-character', (event, arg) => {
+
+  console.log(arg.CharacterID);
   fs.existsSync("Characters/Character" + arg.CharacterID) || fs.mkdirSync("Characters/Character" + arg.CharacterID);
   var parseData = JSON.stringify(arg);
   fs.writeFileSync("Characters/" + "Character" + arg.CharacterID + "/char.json",parseData);
-  console.log("charcter saved");
 })
 
 

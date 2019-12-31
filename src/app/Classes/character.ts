@@ -48,6 +48,7 @@ export class Character
     AzioniMinori: number;
 
     CharacterID: number;
+    CharacterIndex: number;
 
     Ability = new Array<Abilityspec>();
 
@@ -73,7 +74,7 @@ export class Character
 
     public RemoveAbility(index: number)
     {
-      this.Ability.splice(index);
+      this.Ability.splice(index , 1);
     }
 
 
@@ -166,31 +167,31 @@ export class Character
 
     RemoveSpecialRank1(index: number)
     {
-      this.specialRank1.splice(index);
+      this.specialRank1.splice(index, 1);
     }
 
     RemoveSpecialRank2(index: number)
     {
-      this.specialRank2.splice(index);
+      this.specialRank2.splice(index, 1);
     }
     RemoveSpecialRank3(index: number)
     {
-      this.specialRank3.splice(index);
+      this.specialRank3.splice(index, 1);
     }
 
 
     RemoveSpecialRank4(index: number)
     {
-      this.specialRank4.splice(index);
+      this.specialRank4.splice(index, 1);
     }
 
     RemoveSpecialRank5(index: number)
     {
-      this.specialRank5.splice(index);
+      this.specialRank5.splice(index, 1);
     }
     RemoveSpecialRank6(index: number)
     {
-      this.specialRank6.splice(index);
+      this.specialRank6.splice(index, 1);
     }
 
 

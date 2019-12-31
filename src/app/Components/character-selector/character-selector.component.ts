@@ -34,12 +34,18 @@ export class CharacterSelectorComponent implements OnInit {
     this.cdRef.detectChanges();
   }
 
+  Remove(CharacterID: number)
+  {
+    this._electronService.ipcRenderer.send('remove-character', this._characterServiece.getCharacterList()[CharacterID].CharacterID);
+    this._characterServiece.RemoveCharacter(CharacterID);
+    this.characters = this._characterServiece.getCharacterList();
+  }
+
   getImage(char: Character) {
     return this.sanitizer.bypassSecurityTrustUrl(char.image);
   }
 
   onSelect(character: Character): void {
-    console.log(this._characterServiece.getSelectedCharacter().Ability);
     this.slectedCharacter = character;
     this._characterServiece.setSelectedCharacter(character);
     this._characterServiece.sendMessage('SelectedIsChanged');

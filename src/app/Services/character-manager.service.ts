@@ -15,6 +15,7 @@ export class CharacterManagerService {
   private _CharacterSelectorSource = new Subject<string>();
   CharSelectorMessage$ = this._CharacterSelectorSource.asObservable();
 
+  characterIndex: number = 0;
 
   characters = new Array<Character>();
 
@@ -31,13 +32,18 @@ export class CharacterManagerService {
   addCharacter()
   {
     this.characters.push(new Character());
-    this.characters[this.characters.length - 1].CharacterID = this.characters.length - 1;
+    this.characters[this.characters.length - 1].CharacterID = this.characterIndex + 1;
+    this.characterIndex += this.characters[this.characters.length - 1].CharacterID;
+    this.characters[this.characters.length - 1].CharacterIndex = this.characters.length - 1;
     this.setSelectedCharacter(this.characters[this.characters.length - 1]);
   }
 
   addSpecificCharacter(character: Character)
   {
+    character.CharacterIndex = this.characters.length;
     this.characters.push(Object.setPrototypeOf(character, new Character()));
+
+    this.characterIndex += character.CharacterID;
 
     for(let i = 0; i < character.Ability.length; i++)
     {
@@ -58,6 +64,13 @@ export class CharacterManagerService {
     this.selectedCharacter = character;
   }
 
+
+  RemoveCharacter(index: number)
+  {
+    this.selectedCharacter = null;
+    this.characters.splice(index, 1);
+    this.sendMessage('SelectedIsChanged');
+  }
 
   sendMessage(message: string)
   {
