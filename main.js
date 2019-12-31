@@ -54,7 +54,7 @@ ipcMain.on('load-image', (event, arg) => {
   dialog.showOpenDialog().then((filePath) =>
   {
     fs.copyFileSync(filePath['filePaths'][0], "Characters/Character" + arg.CharacterID + "/img.png")
-    event.sender.send('load-image',__dirname + "\\Characters\\Character" + arg.CharacterID + "\\img.png");
+    event.sender.send('load-image', app.getAppPath() + "\\Characters\\Character" + arg.CharacterID + "\\img.png");
   });
 
   //event.sender.send('load-image',__dirname + "\\Characters\\Character" + arg.CharacterID + "\\img.png");
